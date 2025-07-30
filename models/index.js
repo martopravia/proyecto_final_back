@@ -44,5 +44,5 @@ OrderDetails.belongsTo(Product, { foreignKey: "productId" });
 module.exports = {
   sequelize,
   User,
-  Article,
+  Product,
 };

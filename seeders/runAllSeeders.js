@@ -14,10 +14,13 @@
  */
 
 require("dotenv").config();
+const { sequelize } = require("../models/index.js");
 
 async function runAllSeeders() {
-  await require("./userSeeder")();
-  await require("./articleSeeder")();
+  await sequelize.sync({ force: true });
+  // await require("./userSeeder")();
+  await require("./categorySeeder")();
+  await require("./productSeeder")();
 
   /*
    * Aquí se pueden ejectuar otros seeders que hayan en el sistema.

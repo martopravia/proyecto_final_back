@@ -29,7 +29,7 @@ class Product extends Model {
           type: DataTypes.STRING,
           allowNull: true,
         },
-        fetured: {
+        featured: {
           type: DataTypes.BOOLEAN,
         },
       },
