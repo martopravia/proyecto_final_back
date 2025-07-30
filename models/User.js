@@ -15,6 +15,21 @@ class User extends Model {
         lastname: {
           type: DataTypes.STRING,
         },
+        email: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: true,
+        },
+        adress: {
+          type: DataTypes.STRING,
+        },
+        phone: {
+          type: DataTypes.STRING,
+        },
+        role: {
+          type: DataTypes.ENUM("admin", "user"),
+          defaultValue: "user",
+        },
       },
       {
         sequelize,
