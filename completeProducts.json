@@ -172,12 +172,12 @@
   },
   {
     "name": "memo2",
-    "image": "sofa_fabric_grey_raw_pine_wood_2seater_memo2.webp",
+    "image": "sofa_fabric_grey_raw_pine_wood_2seater_memo.webp",
     "description": "This cozy 2-seater sofa is crafted with grey fabric and raw pine wood for a casual, inviting presence that brings timeless comfort and practical elegance into your home environment.",
     "stock": 5,
     "categoryId": 1,
     "featured": false,
-    "slug": "sofa_fabric_grey_raw_pine_wood_2seater_memo2",
+    "slug": "sofa_fabric_grey_raw_pine_wood_2seater_memo",
     "price": 3605
   },
   {
