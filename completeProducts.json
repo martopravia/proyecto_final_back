@@ -1,7 +1,7 @@
 [
   {
     "name": "orella",
-    "image": "https://drive.google.com/file/d/18wdTTXp8hsBGy1QWiOFI3mTnBySdgFKa/view?usp=drivesdk",
+    "image": "table_wood_polished_dark_algarrobo_orella.webp",
     "description": "This exceptional table features solid dark algarrobo wood with a polished finish, showcasing artisanal craftsmanship perfect for upscale interiors and sophisticated gatherings at home or in elegant spaces.",
     "stock": 11,
     "categoryId": 2,
@@ -11,7 +11,7 @@
   },
   {
     "name": "tiptoe",
-    "image": "https://drive.google.com/file/d/1DzAUjcSlZJKqsCtvWh3VeGez7Fy3Ws_9/view?usp=drivesdk",
+    "image": "table_wood_lapacho_iron_tiptoe.webp",
     "description": "An exquisite piece crafted in lapacho wood with robust iron legs, combining rustic strength with modern lines to offer timeless elegance for both urban and country interiors.",
     "stock": 12,
     "categoryId": 2,
@@ -21,7 +21,7 @@
   },
   {
     "name": "varden",
-    "image": "https://drive.google.com/file/d/1XeXIQu9NdOKHIAWnRoFCyud3SBvPnxqS/view?usp=drivesdk",
+    "image": "table_round_wood_cherry_black_iron_varden.webp",
     "description": "This round cherry wood table with black iron legs is designed for contemporary spaces. Its bold contrast and refined shape provide balance, beauty, and functionality in equal measure.",
     "stock": 20,
     "categoryId": 2,
@@ -31,7 +31,7 @@
   },
   {
     "name": "iron",
-    "image": "https://drive.google.com/file/d/1sB9Jj1jb-4r0CY5ypopT-NP5b1vAkn7G/view?usp=drivesdk",
+    "image": "table_wood_cherry_black_iron.webp",
     "description": "This table combines cherry wood with black forged iron legs for a sleek industrial look. Perfect for modern dining rooms or as a stylish statement in creative studios.",
     "stock": 11,
     "categoryId": 2,
@@ -41,7 +41,7 @@
   },
   {
     "name": "thy",
-    "image": "https://drive.google.com/file/d/1vvEqDP2718oWkFRovU6nFskfUn3J762w/view?usp=drivesdk",
+    "image": "table_wood_raw_pine_thy.webp",
     "description": "Rustic raw pine brings warmth and authenticity to this table, evoking simplicity and durability with a raw natural finish perfect for relaxed or earthy design environments.",
     "stock": 6,
     "categoryId": 2,
@@ -51,7 +51,7 @@
   },
   {
     "name": "taavi",
-    "image": "https://drive.google.com/file/d/1H4EI0-PdoR95_Y5lJZGDqwXk4qPf6tgN/view?usp=drivesdk",
+    "image": "table_wood_beech_polished_black_microcement_taavi.webp",
     "description": "Polished beech wood blends with sleek black microcement on this refined table, ideal for upscale minimal interiors or design-driven environments seeking elegance with personality.",
     "stock": 18,
     "categoryId": 2,
@@ -61,7 +61,7 @@
   },
   {
     "name": "sancia",
-    "image": "https://drive.google.com/file/d/1hFO5COHikoev4mpT8jUxy-1r2S2JqtcC/view?usp=drivesdk",
+    "image": "table_wood_mahogany_extendable_sancia.webp",
     "description": "A refined extendable table in classic mahogany wood, this piece suits both intimate dinners and large family gatherings. Its versatility is matched only by its timeless beauty.",
     "stock": 20,
     "categoryId": 2,
@@ -71,7 +71,7 @@
   },
   {
     "name": "mahogany",
-    "image": "https://drive.google.com/file/d/1kUV3RmRV0wIeJdqqxEg3BOpVq-tsLofT/view?usp=drivesdk",
+    "image": "table_wood_black_mahogany.webp",
     "description": "This black mahogany table is a bold and luxurious piece that anchors any room with sophistication. Its sturdy construction and dark finish suggest both tradition and innovation.",
     "stock": 7,
     "categoryId": 2,
@@ -81,7 +81,7 @@
   },
   {
     "name": "mailen",
-    "image": "https://drive.google.com/file/d/1KhrdNgV2nC2Vo2NAphADIO0uJsLKD91N/view?usp=drivesdk",
+    "image": "table_oval_large_red_oak_mailen.webp",
     "description": "This large oval table in red oak combines flowing organic curves with elegant craftsmanship, offering a striking centerpiece for fine dining and entertaining with natural charm.",
     "stock": 17,
     "categoryId": 2,
@@ -91,7 +91,7 @@
   },
   {
     "name": "indara",
-    "image": "https://drive.google.com/file/d/1fBms1r2JD43531U6TxXkMxFcVINDb6s2/view?usp=drivesdk",
+    "image": "table_round_light_cherry_indara.webp",
     "description": "Crafted in light cherry wood, this round table adds brightness and natural elegance to any room. A wonderful balance between simplicity, tradition, and refined modern design.",
     "stock": 2,
     "categoryId": 2,
@@ -101,7 +101,7 @@
   },
   {
     "name": "karsten",
-    "image": "https://drive.google.com/file/d/1mDXlp0mjx4HSsKliiFn1MolefW3ZhuKl/view?usp=drivesdk",
+    "image": "table_iron_raw_red_oak_wood_karsten.webp",
     "description": "Combining raw red oak with industrial iron legs, this table stands firm in both style and function. A piece ideal for bold interiors with tactile authenticity.",
     "stock": 13,
     "categoryId": 2,
@@ -111,7 +111,7 @@
   },
   {
     "name": "hector",
-    "image": "https://drive.google.com/file/d/1VnFuQld7cHeKQ259_hTcCo8t8bV_Hxes/view?usp=drivesdk",
+    "image": "table_concrete_raw_pine_wood_hector.webp",
     "description": "A raw pine and concrete hybrid table with a modern edge. Its industrial charm and strong presence make it the perfect choice for contemporary living spaces.",
     "stock": 19,
     "categoryId": 2,
@@ -121,7 +121,7 @@
   },
   {
     "name": "enzo",
-    "image": "https://drive.google.com/file/d/1tO8-IdN26AVEX5vO3Vn2IwAwBBgXpQ-m/view?usp=drivesdk",
+    "image": "table_forged_iron_polished_lapacho_enzo.webp",
     "description": "The Enzo table brings together polished lapacho wood and elegant forged iron details. A luxurious focal point for those who appreciate craftsmanship and rich material contrast.",
     "stock": 13,
     "categoryId": 2,
@@ -131,7 +131,7 @@
   },
   {
     "name": "carlhansen",
-    "image": "https://drive.google.com/file/d/1jbQAmOwJOyq7AeoOuM1g7JQtHW1IMg1J/view?usp=drivesdk",
+    "image": "table_oval_wood_olive_white_carlhansen.webp",
     "description": "A bright olive wood oval table with whitewashed details. It radiates warmth and freshness, perfect for Scandinavian-inspired interiors or modern rustic environments.",
     "stock": 17,
     "categoryId": 2,
@@ -141,7 +141,7 @@
   },
   {
     "name": "bermuda",
-    "image": "https://drive.google.com/file/d/108D2625HoAnvDuemJ8EOWZrm3Ezzppnt/view?usp=drivesdk",
+    "image": "table_wood_olive_white_bermuda.webp",
     "description": "Crafted in olive wood and finished in soft white tones, this piece captures coastal charm and elegant craftsmanship in a clean, understated form that invites serenity.",
     "stock": 14,
     "categoryId": 2,
@@ -151,7 +151,7 @@
   },
   {
     "name": "ardal",
-    "image": "https://drive.google.com/file/d/1N4FaqOTNoepCcUzHuZnEzTJki_r-a0bo/view?usp=drivesdk",
+    "image": "table_wood_dark_walnut_tempered_glass_ardal.webp",
     "description": "Dark walnut meets tempered glass in this contemporary classic. A refined table with a transparent touch, perfect for creating elegant dining moments or thoughtful workspace design.",
     "stock": 18,
     "categoryId": 2,
@@ -162,7 +162,7 @@
 
   {
     "name": "memo",
-    "image": "https://drive.google.com/file/d/1tW4TKfU01zkYAZmfmkqWk0K0pSmcqGgB/view?usp=drivesdk",
+    "image": "sofa_fabric_grey_raw_pine_wood_3seater_memo.webp",
     "description": "This elegant sofa features raw pine wood accents and gray fabric cushions, offering relaxed sophistication and durable design to elevate your living space with minimalist warmth and natural charm.",
     "stock": 2,
     "categoryId": 1,
@@ -172,7 +172,7 @@
   },
   {
     "name": "memo2",
-    "image": "https://drive.google.com/file/d/1aXMvVzFpuy-6YQc7l7jEBkLSs2C0qTs6/view?usp=drivesdk",
+    "image": "sofa_fabric_grey_raw_pine_wood_2seater_memo2.webp",
     "description": "This cozy 2-seater sofa is crafted with grey fabric and raw pine wood for a casual, inviting presence that brings timeless comfort and practical elegance into your home environment.",
     "stock": 5,
     "categoryId": 1,
@@ -182,7 +182,7 @@
   },
   {
     "name": "martina",
-    "image": "https://drive.google.com/file/d/1jgjYQ2OQ-kyAcVWtsKk7byVJvp9pFCG2/view?usp=drivesdk",
+    "image": "sofa_sheepskin_fluffy_cream_martina.webp",
     "description": "This luxurious sofa boasts creamy sheepskin upholstery and a fluffy texture, bringing warmth, softness, and irresistible charm into stylish interiors designed for indulgent relaxation and contemporary aesthetics.",
     "stock": 5,
     "categoryId": 1,
@@ -192,7 +192,7 @@
   },
   {
     "name": "kumo",
-    "image": "https://drive.google.com/file/d/1CWGMyMSl4u7rVmDmh323yuYnaE9Y78S/view?usp=drivesdk",
+    "image": "sofa_aquaclean_greige_forged_iron_kumo.webp",
     "description": "A masterpiece of refined utility, this greige Aquaclean fabric sofa with forged iron structure invites elegance, comfort, and smart maintenance into modern spaces with understated sophistication.",
     "stock": 7,
     "categoryId": 1,
@@ -202,7 +202,7 @@
   },
   {
     "name": "jessa",
-    "image": "https://drive.google.com/file/d/15TvxKy7-4ap4gFh0gqBkMpBh7kmBwraG/view?usp=drivesdk",
+    "image": "sofa_velvet_red_wood_beech_jessa.webp",
     "description": "This bold red velvet sofa with light beech wood base invites attention and admiration, combining retro flair with the comfort and quality of masterful craftsmanship and modern living.",
     "stock": 6,
     "categoryId": 1,
@@ -212,7 +212,7 @@
   },
   {
     "name": "frenddi",
-    "image": "https://drive.google.com/file/d/1G-8XBS4EKh-wrK4YwB73RKqKDhS_8LhG/view?usp=drivesdk",
+    "image": "sofa_microfiber_beige_wood_walnut_frenddi.webp",
     "description": "Wrapped in soft beige microfiber and supported by warm walnut legs, this sofa offers an inviting design that prioritizes durability, style, and everyday lounging with modern elegance.",
     "stock": 4,
     "categoryId": 1,
@@ -222,7 +222,7 @@
   },
   {
     "name": "sumo",
-    "image": "https://drive.google.com/file/d/1cdqxnc8k4Rzq9VF7EVmFAFattkNd2Vl8/view?usp=drivesdk",
+    "image": "sofa_fluffy_leather_pink_sumo.webp",
     "description": "An extravagant piece with blush pink leather and fluffy lines, this sofa is made for bold interiors where comfort meets luxury in soft, sculptural sophistication and standout form.",
     "stock": 9,
     "categoryId": 1,
@@ -232,7 +232,7 @@
   },
   {
     "name": "minotti",
-    "image": "https://drive.google.com/file/d/1afdRVr9HeM069hkbvjSHMjnTu7WPUlW8/view?usp=drivesdk",
+    "image": "sofa_modular_velvet_linen_beige_minotti.jpg",
     "description": "This modular beige velvet and linen sofa adapts effortlessly to elegant spaces, blending natural fibers and rich textures for comfort and flexibility without compromising elevated aesthetics.",
     "stock": 12,
     "categoryId": 1,
@@ -242,7 +242,7 @@
   },
   {
     "name": "ellie",
-    "image": "https://drive.google.com/file/d/1CrEZFRPdqO5sGk74y9iy6pOV3GyojapB/view?usp=drivesdk",
+    "image": "sofa_velvet_darkbeige_ellie.jpg",
     "description": "A stunning dark beige velvet 2-seater that exudes softness and comfort, Ellie is crafted for those who desire subtle opulence in a compact, cozy and curated piece.",
     "stock": 19,
     "categoryId": 1,
@@ -252,7 +252,7 @@
   },
   {
     "name": "shova",
-    "image": "https://drive.google.com/file/d/16-grKEdbadgx2ewO9ARaVav63lYwkOVd/view?usp=drivesdk",
+    "image": "sofa_modular_suede_2seater_reddishorange_shova.webp",
     "description": "Finished in rich reddish-orange suede, this modular 2-seater sofa adds a sophisticated twist of color and texture, creating a stylish and versatile seating solution for bold interiors.",
     "stock": 12,
     "categoryId": 1,
@@ -262,7 +262,7 @@
   },
   {
     "name": "corda",
-    "image": "https://drive.google.com/file/d/1dBw8MxOrL73Z4WkAsAT3fj2fpoLLTSJM/view?usp=drivesdk",
+    "image": "sofa_modular_suede_lightblue_corda.webp",
     "description": "Wrapped in light blue suede, Corda is an effortlessly stylish modular sofa offering clean lines, soft touch, and adaptable comfort for refined modern homes and expressive ambiances.",
     "stock": 20,
     "categoryId": 1,
@@ -272,7 +272,7 @@
   },
   {
     "name": "carlotta",
-    "image": "https://drive.google.com/file/d/13nDKkzTRyEpQDC5h936oHr3LkF8Xzsvi/view?usp=drivesdk",
+    "image": "sofa_linen_beige_wood_legs_carlotta.webp",
     "description": "Carlotta blends beige linen with subtle wood legs in a classic design that emphasizes comfort, breathability, and the relaxed charm of Mediterranean-inspired interiors with modern lines.",
     "stock": 3,
     "categoryId": 1,
@@ -282,7 +282,7 @@
   },
   {
     "name": "campo",
-    "image": "https://drive.google.com/file/d/1H7nGbsa4DfEKcJyo9umWBFxg2-QrXvYu/view?usp=drivesdk",
+    "image": "sofa_microfiber_aquaclean_grey_campo.webp",
     "description": "Campo brings together Aquaclean grey fabric and plush cushioning in a durable, family-friendly sofa that effortlessly elevates daily lounging with resilient beauty and minimalist aesthetic appeal.",
     "stock": 8,
     "categoryId": 1,
@@ -292,7 +292,7 @@
   },
   {
     "name": "beige_2seater",
-    "image": "https://drive.google.com/file/d/1eya8B1w568pJns9jsiPXCUPn4-a82_IR/view?usp=drivesdk",
+    "image": "sofa_velvet_2seater_beige.webp",
     "description": "This beige 2-seater velvet sofa introduces tactile luxury and soft elegance, enhancing modern interiors with compact proportions and a cozy retreat of comfort and visual refinement.",
     "stock": 11,
     "categoryId": 1,
@@ -302,7 +302,7 @@
   },
   {
     "name": "beige_3seater",
-    "image": "https://drive.google.com/file/d/16lhH971Y-U-QLq0RJngJ8Vs_sdV0LZJP/view?usp=drivesdk",
+    "image": "sofa_velvet_3seater_beige.webp",
     "description": "This beige velvet 3-seater sofa is a sophisticated staple offering generous seating, classic texture, and seamless integration into refined living rooms and stylish spaces of distinction.",
     "stock": 7,
     "categoryId": 1,
@@ -313,7 +313,7 @@
 
   {
     "name": "soro",
-    "image": "https://drive.google.com/file/d/1RXjDGC1dAnBnYkt7ak2j7n8C1MLldt7V/view?usp=drivesdk",
+    "image": "chair_wood_beech_velvet_soro.webp",
     "description": "This designer chair features a beech wood frame and soft velvet upholstery, blending comfort and elegance for luxurious modern dining spaces or home offices.",
     "stock": 15,
     "categoryId": 3,
@@ -323,7 +323,7 @@
   },
   {
     "name": "zahara",
-    "image": "https://drive.google.com/file/d/1DudvmWmNwUK4rYwYX8Cs6II7ZBrPjF8u/view?usp=drivesdk",
+    "image": "chair_leather_brown_zahara.webp",
     "description": "An authentic piece with warm brown genuine leather and sleek lines. This chair adds rich sophistication to any elegant dining or professional setting.",
     "stock": 18,
     "categoryId": 3,
@@ -333,7 +333,7 @@
   },
   {
     "name": "nina",
-    "image": "https://drive.google.com/file/d/164t4jaNLsye_SK8WTKCqsBC2SkqJgv1g/view?usp=drivesdk",
+    "image": "chair_wood_solid_eucalyptus_nina.webp",
     "description": "Crafted from solid eucalyptus wood, this minimalist chair merges durability and timeless design, perfect for natural-style interiors or warm rustic spaces.",
     "stock": 18,
     "categoryId": 3,
@@ -343,7 +343,7 @@
   },
   {
     "name": "beige_corduroy",
-    "image": "https://drive.google.com/file/d/1R85_Jq56n88j60lAkadOOnaxwneVyu52/view?usp=drivesdk",
+    "image": "chair_wood_cherry_corduroy_beige.webp",
     "description": "This cherry wood chair with beige corduroy upholstery brings mid-century charm and cozy texture into contemporary living or lounge environments.",
     "stock": 20,
     "categoryId": 3,
@@ -353,7 +353,7 @@
   },
   {
     "name": "beige_chenille",
-    "image": "https://drive.google.com/file/d/1IuQ8PRoqgE0kP0fTp9YJnhqvW6qMOpiw/view?usp=drivesdk",
+    "image": "chair_beige_chenille_beige.webp",
     "description": "An elegant blend of soft chenille fabric and sculptural design. This chair adds texture, charm, and comfort to both formal and relaxed interiors.",
     "stock": 6,
     "categoryId": 3,
@@ -363,7 +363,7 @@
   },
   {
     "name": "konna",
-    "image": "https://drive.google.com/file/d/1WkOE8mAV3Y1SFVJa83XtzqlDlp-d3s77/view?usp=drivesdk",
+    "image": "chair_wood_teak_velvet_green_konna.webp",
     "description": "This teak wood chair with green velvet seat delivers a perfect mix of earthy sophistication and plush seating for dining or reading corners.",
     "stock": 2,
     "categoryId": 3,
@@ -373,7 +373,7 @@
   },
   {
     "name": "chenille_3legs",
-    "image": "https://drive.google.com/file/d/1Vg2_k8lWLhWm8uKx8Lx78ZObmSnq4w3i/view?usp=drivesdk",
+    "image": "chair_3legs_wood_walnut_fluffy_chenille.webp",
     "description": "A bold piece featuring dark walnut wood, soft chenille fabric and a unique three-leg design, merging balance and artistic expression.",
     "stock": 4,
     "categoryId": 3,
@@ -383,7 +383,7 @@
   },
   {
     "name": "marchin",
-    "image": "https://drive.google.com/file/d/1apVIoYjnWAeslGN1f_m9EbxNAX1ylj5l/view?usp=drivesdk",
+    "image": "chair_swivel_chenille_green_oak_marchin.webp",
     "description": "An exquisite chair with swivel base, green chenille, and oak structure. Perfect for creative spaces where comfort and elegance intertwine.",
     "stock": 14,
     "categoryId": 3,
@@ -393,7 +393,7 @@
   },
   {
     "name": "fondes",
-    "image": "https://drive.google.com/file/d/1CgSYVGGEsabuFozVtzIpqF2tJ5ObY5r2/view?usp=drivesdk",
+    "image": "chair_wood_solid_english_oak_fondes.webp",
     "description": "A solid English oak chair with a timeless design. Its grain-rich finish and ergonomic backrest make it a standout in refined interiors.",
     "stock": 10,
     "categoryId": 3,
@@ -403,7 +403,7 @@
   },
   {
     "name": "aniella",
-    "image": "https://drive.google.com/file/d/1mB06c9KS8uuFcj9v-FPnFuuRqguVk15G/view?usp=drivesdk",
+    "image": "chair_sheepskin_forged_black_iron_aniella.webp",
     "description": "A luxurious piece with black forged iron legs and fluffy sheepskin cover, designed for premium lounge areas and modern design lovers.",
     "stock": 20,
     "categoryId": 3,
@@ -413,7 +413,7 @@
   },
   {
     "name": "normann",
-    "image": "https://drive.google.com/file/d/1JJK44Jkax30iZmkbiA3y_EV1vYp-YGzp/view?usp=drivesdk",
+    "image": "chair_wood_ebony_raw_copenhagen_normann.webp",
     "description": "Ebony wood in a raw matte finish defines this sleek minimalist chair that fits seamlessly into Nordic and industrial-inspired interiors.",
     "stock": 9,
     "categoryId": 3,
@@ -423,7 +423,7 @@
   },
   {
     "name": "lanson",
-    "image": "https://drive.google.com/file/d/1RTcxj2qNozDv70P6wdhW_UJ9KcGNgkmN/view?usp=drivesdk",
+    "image": "chair_wood_cedar_smoked_lanson.webp",
     "description": "Smoked cedar gives this chair an earthy aroma and deep grain tone. A unique find for interiors that celebrate natural warmth.",
     "stock": 5,
     "categoryId": 3,
@@ -433,7 +433,7 @@
   },
   {
     "name": "karsten_iron",
-    "image": "https://drive.google.com/file/d/1HdWEIcqrq8MT3dWkSdjfq7K87mcLKh_b/view?usp=drivesdk",
+    "image": "chair_wood_oak_danish_karsten_iron.jpg",
     "description": "Danish oak and iron converge in this ultra-modern chair. With bold contrast and comfort, it invites admiration and conversation in any setting.",
     "stock": 9,
     "categoryId": 3,
@@ -443,7 +443,7 @@
   },
   {
     "name": "swivel_oak",
-    "image": "https://drive.google.com/file/d/1spDCpffzpLlUwZ0-hmDtmOoSZhJMLqUy/view?usp=drivesdk",
+    "image": "chair_wood_oak_minimalist_swivel.jpg",
     "description": "Featuring a natural oak build and minimalist swivel seat, this chair is both striking and practical for evolving contemporary interiors.",
     "stock": 15,
     "categoryId": 3,
@@ -453,7 +453,7 @@
   },
   {
     "name": "cedar_chenille",
-    "image": "https://drive.google.com/file/d/1dOAAQ6FnvQVmVAjqkHNxOlxOxyw4ufza/view?usp=drivesdk",
+    "image": "chair_wood_cedar_chenille.webp",
     "description": "Combining raw cedar structure and plush chenille seating, this piece radiates elegance while maintaining strong natural warmth and character.",
     "stock": 5,
     "categoryId": 3,
@@ -463,7 +463,7 @@
   },
   {
     "name": "cord",
-    "image": "https://drive.google.com/file/d/1njTbg98BsHR3iBID_8Fprc4AX_cwfI27/view?usp=drivesdk",
+    "image": "chair_wooden_cord.webp",
     "description": "This wooden chair features an artisanal cord weave seat, bringing relaxed rustic refinement to eclectic kitchens and breezy verandas alike.",
     "stock": 9,
     "categoryId": 3,
