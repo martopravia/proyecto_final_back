@@ -42,6 +42,9 @@ class Product extends Model {
 
     return Product;
   }
+  setImageUrl() {
+    this.image = `${process.env.BASE_URL_IMAGE}${this.image}`;
+  }
 }
 
 module.exports = Product;

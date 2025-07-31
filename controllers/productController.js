@@ -2,10 +2,11 @@ const { Product } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
-  // console.log("Entrando a ruta");
   try {
     const products = await Product.findAll();
-    // console.log(products);
+    for (const product of products) {
+      product.setImageUrl();
+    }
     res.json(products);
   } catch (error) {
     console.log("Error al traer productos: ", error);
