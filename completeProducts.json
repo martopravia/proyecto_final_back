@@ -81,7 +81,7 @@
   },
   {
     "name": "mailen",
-    "image": "table_oval_large_red_oak_mailen.webp",
+    "image": "table_oval_large_red_oak_mailen.png",
     "description": "This large oval table in red oak combines flowing organic curves with elegant craftsmanship, offering a striking centerpiece for fine dining and entertaining with natural charm.",
     "stock": 17,
     "categoryId": 2,
@@ -91,7 +91,7 @@
   },
   {
     "name": "indara",
-    "image": "table_round_light_cherry_indara.webp",
+    "image": "table_round_light_cherry_indara.png",
     "description": "Crafted in light cherry wood, this round table adds brightness and natural elegance to any room. A wonderful balance between simplicity, tradition, and refined modern design.",
     "stock": 2,
     "categoryId": 2,
@@ -182,7 +182,7 @@
   },
   {
     "name": "martina",
-    "image": "sofa_sheepskin_fluffy_cream_martina.webp",
+    "image": "sofa_sheepskin_fluffy_cream_martina.png",
     "description": "This luxurious sofa boasts creamy sheepskin upholstery and a fluffy texture, bringing warmth, softness, and irresistible charm into stylish interiors designed for indulgent relaxation and contemporary aesthetics.",
     "stock": 5,
     "categoryId": 1,
@@ -272,7 +272,7 @@
   },
   {
     "name": "carlotta",
-    "image": "sofa_linen_beige_wood_legs_carlotta.webp",
+    "image": "sofa_linen_beige_wood_legs_carlotta.png",
     "description": "Carlotta blends beige linen with subtle wood legs in a classic design that emphasizes comfort, breathability, and the relaxed charm of Mediterranean-inspired interiors with modern lines.",
     "stock": 3,
     "categoryId": 1,
@@ -282,7 +282,7 @@
   },
   {
     "name": "campo",
-    "image": "sofa_microfiber_aquaclean_grey_campo.webp",
+    "image": "sofa_microfiber_aquaclean_grey_campo.png",
     "description": "Campo brings together Aquaclean grey fabric and plush cushioning in a durable, family-friendly sofa that effortlessly elevates daily lounging with resilient beauty and minimalist aesthetic appeal.",
     "stock": 8,
     "categoryId": 1,
@@ -323,7 +323,7 @@
   },
   {
     "name": "zahara",
-    "image": "chair_leather_brown_zahara.webp",
+    "image": "chair_leather_brown_zahara.png",
     "description": "An authentic piece with warm brown genuine leather and sleek lines. This chair adds rich sophistication to any elegant dining or professional setting.",
     "stock": 18,
     "categoryId": 3,
@@ -333,7 +333,7 @@
   },
   {
     "name": "nina",
-    "image": "chair_wood_solid_eucalyptus_nina.webp",
+    "image": "chair_wood_solid_eucalyptus_nina.png",
     "description": "Crafted from solid eucalyptus wood, this minimalist chair merges durability and timeless design, perfect for natural-style interiors or warm rustic spaces.",
     "stock": 18,
     "categoryId": 3,
@@ -343,7 +343,7 @@
   },
   {
     "name": "beige_corduroy",
-    "image": "chair_wood_cherry_corduroy_beige.webp",
+    "image": "chair_wood_cherry_corduroy_beige.png",
     "description": "This cherry wood chair with beige corduroy upholstery brings mid-century charm and cozy texture into contemporary living or lounge environments.",
     "stock": 20,
     "categoryId": 3,
@@ -353,7 +353,7 @@
   },
   {
     "name": "beige_chenille",
-    "image": "chair_beige_chenille_beige.webp",
+    "image": "chair_beige_chenille_beige.png",
     "description": "An elegant blend of soft chenille fabric and sculptural design. This chair adds texture, charm, and comfort to both formal and relaxed interiors.",
     "stock": 6,
     "categoryId": 3,
@@ -363,7 +363,7 @@
   },
   {
     "name": "konna",
-    "image": "chair_wood_teak_velvet_green_konna.webp",
+    "image": "chair_wood_teak_velvet_green_konna.png",
     "description": "This teak wood chair with green velvet seat delivers a perfect mix of earthy sophistication and plush seating for dining or reading corners.",
     "stock": 2,
     "categoryId": 3,
@@ -373,7 +373,7 @@
   },
   {
     "name": "chenille_3legs",
-    "image": "chair_3legs_wood_walnut_fluffy_chenille.webp",
+    "image": "chair_3legs_wood_walnut_fluffy_chenille.png",
     "description": "A bold piece featuring dark walnut wood, soft chenille fabric and a unique three-leg design, merging balance and artistic expression.",
     "stock": 4,
     "categoryId": 3,
@@ -383,7 +383,7 @@
   },
   {
     "name": "marchin",
-    "image": "chair_swivel_chenille_green_oak_marchin.webp",
+    "image": "chair_swivel_chenille_green_oak_marchin.png",
     "description": "An exquisite chair with swivel base, green chenille, and oak structure. Perfect for creative spaces where comfort and elegance intertwine.",
     "stock": 14,
     "categoryId": 3,
@@ -393,7 +393,7 @@
   },
   {
     "name": "fondes",
-    "image": "chair_wood_solid_english_oak_fondes.webp",
+    "image": "chair_wood_solid_english_oak_fondes.png",
     "description": "A solid English oak chair with a timeless design. Its grain-rich finish and ergonomic backrest make it a standout in refined interiors.",
     "stock": 10,
     "categoryId": 3,
@@ -403,7 +403,7 @@
   },
   {
     "name": "aniella",
-    "image": "chair_sheepskin_forged_black_iron_aniella.webp",
+    "image": "chair_sheepskin_forged_black_iron_aniella.png",
     "description": "A luxurious piece with black forged iron legs and fluffy sheepskin cover, designed for premium lounge areas and modern design lovers.",
     "stock": 20,
     "categoryId": 3,
@@ -453,7 +453,7 @@
   },
   {
     "name": "cedar_chenille",
-    "image": "chair_wood_cedar_chenille.webp",
+    "image": "chair_wood_cedar_chenille.png",
     "description": "Combining raw cedar structure and plush chenille seating, this piece radiates elegance while maintaining strong natural warmth and character.",
     "stock": 5,
     "categoryId": 3,
