@@ -1,9 +1,15 @@
 const { Product } = require("../models");
+const Category = require("../models/Category");
 
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const products = await Product.findAll();
+    const products = await Product.findAll({
+      include: {
+        model: Category,
+        attributes: ["name"],
+      },
+    });
     for (const product of products) {
       product.setImageUrl();
     }
