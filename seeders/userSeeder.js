@@ -57,6 +57,7 @@ module.exports = async () => {
         await OrderDetails.create({
           orderId: order.id,
           productId: product.id,
+          name: product.name,
           quantity,
           unitPrice: product.price,
         });

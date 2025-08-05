@@ -4,13 +4,7 @@ module.exports = {
   async index(req, res) {
     try {
       const orders = await Order.findAll({
-        include: [
-          {
-            model: OrderDetails,
-            include: [{ model: Product }],
-          },
-          { model: User, attributes: ["id", "name", "email"] },
-        ],
+        include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
       });
       res.json(orders);
     } catch (error) {
@@ -22,13 +16,7 @@ module.exports = {
   async show(req, res) {
     try {
       const order = await Order.findByPk(req.params.id, {
-        include: [
-          {
-            model: OrderDetails,
-            include: [{ model: Product }],
-          },
-          { model: User, attributes: ["id", "name", "email"] },
-        ],
+        include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
       });
       if (!order) return res.status(404).json({ error: "Order not found" });
 
