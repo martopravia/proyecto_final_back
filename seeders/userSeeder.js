@@ -7,8 +7,8 @@ module.exports = async () => {
     firstname: "Admin",
     lastname: "Test",
     email: "admin@test.com",
-    address: faker.location.streetAddress(),
-    phone: faker.phone.number(),
+    address: "Address test 1234, Montevideo, Uruguay",
+    phone: "098876543",
     password: await bcrypt.hash("admin", 10),
     role: "admin",
   });
@@ -20,8 +20,8 @@ module.exports = async () => {
         firstname: "User",
         lastname: "Test",
         email: "user@test.com",
-        address: faker.location.streetAddress(),
-        phone: faker.phone.number(),
+        address: "Address test 1234, Montevideo, Uruguay",
+        phone: "098876543",
         password: await bcrypt.hash("user", 10),
         role: "user",
       });
