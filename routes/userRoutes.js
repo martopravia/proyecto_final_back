@@ -9,7 +9,7 @@ const { expressjwt: checkjwt } = require("express-jwt");
  * Notar que todos estos endpoints tienen como prefijo el string "/users",
  * tal como se definió en el archivo `routes/index.js`.
  */
-// router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }));
+router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }));
 router.get("/", userController.index);
 router.post("/register", userController.store);
 router.get("/:id", userController.show);
