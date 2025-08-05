@@ -28,11 +28,36 @@ module.exports = {
   },
 
   async store(req, res) {
-    const { userId, products, shippingAddress, paymentMethod, totalAmount } = req.body;
+    const { products, shippingAddress, paymentMethod } = req.body;
     if (!products || products.length === 0) {
       return res.status(400).json({ error: "Products are required" });
     }
     try {
+      const userId = req.user.id || req.user.sub;
+      const productIds = products.map((product) => product.id);
+      const dbProducts = await Product.findAll({
+        where: { id: productIds },
+      });
+
+      if (dbProducts.length !== products.length) {
+        return res.status(400).json({ error: "Some products not found" });
+      }
+
+      const orderDetailsData = products.map((item) => {
+        const dbProduct = dbProducts.find((p) => p.id === item.id);
+        return {
+          productId: dbProduct.id,
+          quantity: item.quantity,
+          unitPrice: dbProduct.price,
+          productName: dbProduct.name,
+        };
+      });
+
+      const totalAmount = orderDetailsData.reduce(
+        (acc, item) => acc + item.quantity * item.unitPrice,
+        0,
+      );
+
       const order = await Order.create({
         userId,
         shippingAddress,
@@ -41,11 +66,9 @@ module.exports = {
         status: "pending",
       });
 
-      const orderDetails = products.map((product) => ({
+      const orderDetails = orderDetailsData.map((product) => ({
+        ...detail,
         orderId: order.id,
-        productId: product.id,
-        quantity: product.quantity,
-        unitPrice: product.price,
       }));
 
       await OrderDetails.bulkCreate(orderDetails);
