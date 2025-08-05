@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
 
 class User extends Model {
   static initModel(sequelize) {
@@ -11,20 +12,24 @@ class User extends Model {
         },
         firstname: {
           type: DataTypes.STRING,
+          allowNull: false,
         },
         lastname: {
           type: DataTypes.STRING,
+          allowNull: false,
         },
         email: {
           type: DataTypes.STRING,
           allowNull: false,
           unique: true,
         },
-        adress: {
+        address: {
           type: DataTypes.STRING,
+          allowNull: false,
         },
         phone: {
           type: DataTypes.STRING,
+          allowNull: false,
         },
         role: {
           type: DataTypes.ENUM("admin", "user"),
@@ -39,5 +44,8 @@ class User extends Model {
     return User;
   }
 }
+User.prototype.validatePassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 module.exports = User;
