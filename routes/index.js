@@ -5,6 +5,7 @@
 
 const userRoutes = require("./userRoutes");
 const productRoutes = require("./productRoutes");
+const orderRoutes = require("./orderRoutes");
 const exampleRoutes = require("./exampleRoutes");
 const authRoutes = require("./authRoutes");
 
@@ -22,5 +23,7 @@ module.exports = (app) => {
   app.use("/users", userRoutes);
   app.use("/products", productRoutes);
   app.use("/tokens", authRoutes);
+  app.use("/orders", orderRoutes);
+
   app.use("/examples", exampleRoutes);
 };
