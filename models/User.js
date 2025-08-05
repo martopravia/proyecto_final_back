@@ -35,6 +35,11 @@ class User extends Model {
           type: DataTypes.ENUM("admin", "user"),
           defaultValue: "user",
         },
+        password: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          private: true,
+        },
       },
       {
         sequelize,
@@ -43,9 +48,13 @@ class User extends Model {
     );
     return User;
   }
+
+  async validatePassword(password) {
+    return await bcrypt.compare(password, this.password);
+  }
 }
-User.prototype.validatePassword = async function (password) {
-  return await bcrypt.compare(password, this.password);
-};
+// User.prototype.validatePassword = async function (password) {
+//   return await bcrypt.compare(password, this.password);
+// };
 
 module.exports = User;

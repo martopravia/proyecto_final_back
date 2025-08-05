@@ -3,8 +3,11 @@ const { User } = require("../models");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
+    const { filter, limit } = req.params;
     const users = await User.findAll({
       attributes: ["id", "firstname", "lastname", "email", "address", "phone", "role"],
+      where: filter,
+      limit: limit ? parseInt(limit) : undefined,
     });
     return res.status(200).json(users);
   } catch (error) {
@@ -61,7 +64,6 @@ async function store(req, res) {
       lastname: user.lastname,
       email: user.email,
       phone: user.phone,
-
       role: user.role,
     });
   } catch (error) {

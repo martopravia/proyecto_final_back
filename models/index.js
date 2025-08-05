@@ -45,4 +45,7 @@ module.exports = {
   sequelize,
   User,
   Product,
+  Order,
+  OrderDetails,
+  Category,
 };
