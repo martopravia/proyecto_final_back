@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const bcrypt = require("bcrypt");
 
 // Display a listing of the resource.
 async function index(req, res) {
