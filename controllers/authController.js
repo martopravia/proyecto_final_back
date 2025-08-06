@@ -6,7 +6,8 @@ async function login(req, res) {
   try {
     const { email, password } = req.body;
     console.log("Intentando login con:", email, password);
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email }, attributes: { include: ["password"] } });
+    console.log("Password en DB:", user.password);
 
     if (!user) {
       return res.status(401).json({ message: "Invalid credentials" });

@@ -7,7 +7,7 @@ const userRoutes = require("./userRoutes");
 const productRoutes = require("./productRoutes");
 const orderRoutes = require("./orderRoutes");
 const exampleRoutes = require("./exampleRoutes");
-const tokenRoutes = require("./tokenRoutesDash");
+// const tokenRoutes = require("./tokenRoutesDash");
 const authRoutes = require("./authRoutes");
 
 module.exports = (app) => {
