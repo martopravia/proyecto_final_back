@@ -25,11 +25,11 @@ class User extends BaseModel {
         },
         address: {
           type: DataTypes.STRING,
-          allowNull: false,
+          allowNull: true,
         },
         phone: {
           type: DataTypes.STRING,
-          allowNull: false,
+          allowNull: true,
         },
         role: {
           type: DataTypes.ENUM("admin", "user"),

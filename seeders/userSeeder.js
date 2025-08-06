@@ -1,6 +1,5 @@
 const faker = require("@faker-js/faker").fakerES;
 const { Product, User, Order, OrderDetails } = require("../models");
-const bcrypt = require("bcrypt");
 
 module.exports = async () => {
   await User.create({

@@ -14,7 +14,7 @@ module.exports = {
         where,
         limit: limit ? parseInt(limit) : 20,
         offset: skip ? parseInt(skip) : 0,
-        include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
+        include: [OrderDetails, User],
       });
       res.json(orders);
     } catch (error) {
@@ -26,7 +26,14 @@ module.exports = {
   async show(req, res) {
     try {
       const order = await Order.findByPk(req.params.id, {
-        include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
+        include: [
+          OrderDetails,
+          {
+            model: User,
+            as: "user",
+            attributes: ["id", "name", "email"],
+          },
+        ],
       });
       if (!order) return res.status(404).json({ error: "Order not found" });
 
@@ -38,11 +45,43 @@ module.exports = {
   },
 
   async store(req, res) {
-    const { userId, products, shippingAddress, paymentMethod, totalAmount } = req.body;
+    console.log("Creating order with body:", req.body);
+    const { userId, products, shippingAddress, paymentMethod } = req.body;
     if (!products || products.length === 0) {
       return res.status(400).json({ error: "Products are required" });
     }
     try {
+      console.log("Authenticated user:", req.auth);
+      const authId = req.auth.sub;
+      if (authId !== userId) {
+        return res
+          .status(403)
+          .json({ error: "Forbidden: User ID does not match authenticated user" });
+      }
+      const productIds = products.map((product) => product.productId);
+      const dbProducts = await Product.findAll({
+        where: { id: productIds },
+      });
+
+      if (dbProducts.length !== products.length) {
+        return res.status(400).json({ error: "Some products not found" });
+      }
+
+      const orderDetailsData = products.map((item) => {
+        const dbProduct = dbProducts.find((p) => p.id === item.productId);
+        return {
+          productId: dbProduct.id,
+          name: dbProduct.name,
+          quantity: item.quantity,
+          unitPrice: dbProduct.price,
+        };
+      });
+
+      const totalAmount = orderDetailsData.reduce(
+        (acc, item) => acc + item.quantity * item.unitPrice,
+        0,
+      );
+
       const order = await Order.create({
         userId,
         shippingAddress,
@@ -51,11 +90,9 @@ module.exports = {
         status: "pending",
       });
 
-      const orderDetails = products.map((product) => ({
+      const orderDetails = orderDetailsData.map((detail) => ({
+        ...detail,
         orderId: order.id,
-        productId: product.id,
-        quantity: product.quantity,
-        unitPrice: product.price,
       }));
 
       await OrderDetails.bulkCreate(orderDetails);
@@ -93,6 +130,27 @@ module.exports = {
       res.status(204).send();
     } catch (error) {
       console.error("Error deleting order:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  },
+  async getByUser(req, res) {
+    try {
+      const { userId } = req.params;
+
+      const orders = await Order.findAll({
+        where: { userId },
+        include: [
+          {
+            model: OrderDetails,
+            include: [Product],
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+
+      res.json(orders);
+    } catch (error) {
+      console.error("Error fetching user orders:", error);
       res.status(500).json({ error: "Internal server error" });
     }
   },
