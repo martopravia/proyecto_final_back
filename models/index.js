@@ -32,6 +32,7 @@ Category.initModel(sequelize);
  * Por ejemplo, si un User está relacionado con un Article, establecerlo
  * aquí abajo.
  */
+
 User.hasMany(Order, { foreignKey: "userId" });
 Order.belongsTo(User, { foreignKey: "userId" });
 Order.hasMany(OrderDetails, { foreignKey: "orderId" });
@@ -45,4 +46,7 @@ module.exports = {
   sequelize,
   User,
   Product,
+  Order,
+  OrderDetails,
+  Category,
 };

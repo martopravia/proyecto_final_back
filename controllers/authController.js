@@ -28,6 +28,8 @@ async function login(req, res) {
         lastname: user.lastname,
         email: user.email,
         role: user.role,
+        address: user.address,
+        phone: user.phone,
       },
     });
   } catch (error) {
