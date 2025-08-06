@@ -28,13 +28,20 @@ module.exports = {
   },
 
   async store(req, res) {
-    const { products, shippingAddress, paymentMethod } = req.body;
+    console.log("Creating order with body:", req.body);
+    const { userId, products, shippingAddress, paymentMethod } = req.body;
     if (!products || products.length === 0) {
       return res.status(400).json({ error: "Products are required" });
     }
     try {
-      const userId = req.user.id || req.user.sub;
-      const productIds = products.map((product) => product.id);
+      console.log("Authenticated user:", req.auth);
+      const authId = req.auth.sub;
+      if (authId !== userId) {
+        return res
+          .status(403)
+          .json({ error: "Forbidden: User ID does not match authenticated user" });
+      }
+      const productIds = products.map((product) => product.productId);
       const dbProducts = await Product.findAll({
         where: { id: productIds },
       });
@@ -44,12 +51,12 @@ module.exports = {
       }
 
       const orderDetailsData = products.map((item) => {
-        const dbProduct = dbProducts.find((p) => p.id === item.id);
+        const dbProduct = dbProducts.find((p) => p.id === item.productId);
         return {
           productId: dbProduct.id,
+          name: dbProduct.name,
           quantity: item.quantity,
           unitPrice: dbProduct.price,
-          productName: dbProduct.name,
         };
       });
 
@@ -66,7 +73,7 @@ module.exports = {
         status: "pending",
       });
 
-      const orderDetails = orderDetailsData.map((product) => ({
+      const orderDetails = orderDetailsData.map((detail) => ({
         ...detail,
         orderId: order.id,
       }));
