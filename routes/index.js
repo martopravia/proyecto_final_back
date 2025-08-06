@@ -6,6 +6,7 @@
 const userRoutes = require("./userRoutes");
 const productRoutes = require("./productRoutes");
 const exampleRoutes = require("./exampleRoutes");
+const tokenRoutes = require("./tokenRoutesDash");
 
 module.exports = (app) => {
   /*
@@ -20,6 +21,6 @@ module.exports = (app) => {
    */
   app.use("/users", userRoutes);
   app.use("/products", productRoutes);
-
+  app.use("/tokens", tokenRoutes);
   app.use("/examples", exampleRoutes);
 };

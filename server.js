@@ -11,6 +11,10 @@ app.use(express.json());
 
 routes(app);
 
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hola desde el backend!" });
+});
+
 app.listen(APP_PORT, () => {
   console.log(`\n[Express] Servidor corriendo en el puerto ${APP_PORT}.`);
   console.log(`[Express] Ingresar a http://localhost:${APP_PORT}.\n`);

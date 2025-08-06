@@ -20,7 +20,7 @@ class User extends Model {
           allowNull: false,
           unique: true,
         },
-        adress: {
+        address: {
           type: DataTypes.STRING,
         },
         phone: {
