@@ -3,15 +3,18 @@ const { Order, OrderDetails, Product, User } = require("../models");
 module.exports = {
   async index(req, res) {
     try {
+      const { limit, skip, userId } = req.query;
+
+      const where = {};
+      if (userId) {
+        where.userId = userId;
+      }
+
       const orders = await Order.findAll({
-        include: [
-          OrderDetails,
-          {
-            model: User,
-            as: "user",
-            attributes: ["id", "firstname", "lastname", "email", "role"],
-          },
-        ],
+        where,
+        limit: limit ? parseInt(limit) : 20,
+        offset: skip ? parseInt(skip) : 0,
+        include: [OrderDetails, User],
       });
       res.json(orders);
     } catch (error) {

@@ -1,28 +1,26 @@
 const faker = require("@faker-js/faker").fakerES;
 const { Product, User, Order, OrderDetails } = require("../models");
-const bcrypt = require("bcrypt");
 
 module.exports = async () => {
   await User.create({
     firstname: "Admin",
     lastname: "Test",
     email: "admin@test.com",
-    address: "Address test 1234, Montevideo, Uruguay",
-    phone: "098876543",
-    password: await bcrypt.hash("admin", 10),
+    address: faker.location.streetAddress(),
+    phone: faker.phone.number(),
+    password: "admin",
     role: "admin",
   });
   for (let i = 0; i < 20; i++) {
-    const hashedPassword = await bcrypt.hash("1234", 10);
     let user;
     if (i === 0) {
       user = await User.create({
         firstname: "User",
         lastname: "Test",
         email: "user@test.com",
-        address: "Address test 1234, Montevideo, Uruguay",
-        phone: "098876543",
-        password: await bcrypt.hash("user", 10),
+        address: faker.location.streetAddress(),
+        phone: faker.phone.number(),
+        password: "user",
         role: "user",
       });
     } else {
@@ -32,7 +30,7 @@ module.exports = async () => {
         email: faker.internet.email(),
         address: faker.location.streetAddress(),
         phone: faker.phone.number(),
-        password: hashedPassword,
+        password: "1234",
         role: "user",
       });
     }

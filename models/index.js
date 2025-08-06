@@ -34,13 +34,29 @@ Category.initModel(sequelize);
  */
 
 User.hasMany(Order, { foreignKey: "userId" });
-Order.belongsTo(User, { foreignKey: "userId", as: "user" });
+Order.belongsTo(User, { foreignKey: "userId" });
 Order.hasMany(OrderDetails, { foreignKey: "orderId" });
 OrderDetails.belongsTo(Order, { foreignKey: "orderId" });
 Product.belongsTo(Category, { foreignKey: "categoryId" });
 Category.hasMany(Product, { foreignKey: "categoryId" });
 Product.hasMany(OrderDetails, { foreignKey: "productId" });
 OrderDetails.belongsTo(Product, { foreignKey: "productId" });
+
+const ModelsInfo = {
+  users: { model: User, include: [] },
+  products: {
+    model: Product,
+    include: {
+      model: Category,
+      attributes: ["name"],
+    },
+  },
+  orders: {
+    model: Order,
+    include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
+  },
+  category: { model: Category, include: [] },
+};
 
 module.exports = {
   sequelize,
@@ -49,4 +65,5 @@ module.exports = {
   Order,
   OrderDetails,
   Category,
+  ModelsInfo,
 };
