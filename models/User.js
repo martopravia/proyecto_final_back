@@ -1,7 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
+const { DataTypes } = require("sequelize");
+const { BaseModel } = require("./BaseModel");
 
-class User extends Model {
+class User extends BaseModel {
   static initModel(sequelize) {
     User.init(
       {
@@ -38,23 +38,34 @@ class User extends Model {
         password: {
           type: DataTypes.STRING,
           allowNull: false,
-          private: true,
         },
       },
       {
         sequelize,
-        modelName: "user", // Nombre del modelo en singular y en minúscula.
+        modelName: "user",
+        scopes: {
+          withAll: {},
+        },
+        defaultScope: {
+          attributes: { exclude: ["password"] },
+        },
       },
     );
+
+    User.beforeCreate(User.encryptPassword);
+
+    User.beforeUpdate(User.encryptPassword);
+
+    User.beforeBulkCreate(User.encryptPassword);
+
     return User;
   }
 
-  async validatePassword(password) {
-    return await bcrypt.compare(password, this.password);
+  toJSON() {
+    const attributes = { ...this.get() };
+    delete attributes.password;
+    return attributes;
   }
 }
-// User.prototype.validatePassword = async function (password) {
-//   return await bcrypt.compare(password, this.password);
-// };
 
 module.exports = User;

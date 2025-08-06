@@ -1,100 +1,75 @@
-const { tr } = require("@faker-js/faker");
 const { Product } = require("../models");
 const Category = require("../models/Category");
 
 // Display a listing of the resource.
 async function index(req, res) {
   try {
+    const { limit, skip } = req.query;
+
     const products = await Product.findAll({
+      limit: limit ? parseInt(limit) : 20,
+      offset: skip ? parseInt(skip) : 0,
       include: {
         model: Category,
         attributes: ["name"],
       },
     });
-    for (const product of products) {
-      product.setImageUrl();
-    }
     res.json(products);
   } catch (error) {
-    console.log("Error al traer productos: ", error);
-    res.status(500).json({ error: "No se pudo traer los productos" });
+    console.error("Error fetching products: ", error);
+    res.status(500).json({ message: "Server error" });
   }
 }
 
 // Display the specified resource.
 async function show(req, res) {
   try {
-    const product = await Product.findByPk(req.params.id, {
-      include: {
-        model: Category,
-        attributes: ["name"],
-      },
-    });
-    if (!product) return res.status(404).json({ error: "Product not found" });
-    product.setImageUrl();
-    res.json(product);
+    return res.status(200).json(req.product);
   } catch (error) {
-    console.log("Error al traer el producto: ", error);
-    res.status(500).json({ error: "No se pudo traer el producto" });
+    console.error("Error fetching product:", error);
+    return res.status(500).json({ message: "Server error" });
   }
 }
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  const { name, description, price, stock, image, featured, categoryId } = req.body;
+  const { sanitizedData } = req.body;
   try {
-    const product = await Product.create({
-      name,
-      description,
-      price,
-      stock,
-      image,
-      featured,
-      categoryId,
-    });
-    product.setImageUrl();
+    const product = await Product.create(sanitizedData);
     res.status(201).json(product);
   } catch (error) {
-    console.log("Error al crear el producto: ", error);
-    res.status(500).json({ error: "No se pudo crear el producto" });
+    console.error("Error saving the product: ", error);
+    res.status(500).json({ error: "Server Error" });
   }
 }
 
 // Update the specified resource in storage.
 async function update(req, res) {
   try {
-    const product = await Product.findByPk(req.params.id);
-    if (!product) return res.status(404).json({ error: "Product not found" });
+    const { product, sanitizedData } = req;
 
-    const { name, description, price, stock, image, featured, categoryId } = req.body;
-    await product.update({
-      name,
-      description,
-      price,
-      stock,
-      image,
-      featured,
-      categoryId,
-    });
-    product.setImageUrl();
-    res.json(product);
+    Object.assign(product, sanitizedData);
+
+    await product.save();
+
+    res.status(200).json(product);
   } catch (error) {
-    console.log("Error al actualizar el producto: ", error);
-    res.status(500).json({ error: "No se pudo actualizar el producto" });
+    console.error("Error updating the product: ", error);
+    res.status(500).json({ error: "Server Error" });
   }
 }
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {
   try {
-    const product = await Product.findByPk(req.params.id);
-    if (!product) return res.status(404).json({ error: "Product not found" });
+    const product = req.product;
 
     await product.destroy();
-    res.status(204).send();
+
+    return res.status(200).json({ message: "Product deleted successfully" });
   } catch (error) {
-    console.log("Error al borrar el producto: ", error);
-    res.status(500).json({ error: "No se pudo borrar el producto" });
+    console.error("Error deleting product:", error);
+    return res.status(500).json({ message: "Server error" });
   }
 }
 

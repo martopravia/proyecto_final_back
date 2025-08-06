@@ -9,11 +9,10 @@ module.exports = async () => {
     email: "admin@test.com",
     address: faker.location.streetAddress(),
     phone: faker.phone.number(),
-    password: await bcrypt.hash("admin", 10),
+    password: "admin",
     role: "admin",
   });
   for (let i = 0; i < 20; i++) {
-    const hashedPassword = await bcrypt.hash("1234", 10);
     let user;
     if (i === 0) {
       user = await User.create({
@@ -22,7 +21,7 @@ module.exports = async () => {
         email: "user@test.com",
         address: faker.location.streetAddress(),
         phone: faker.phone.number(),
-        password: await bcrypt.hash("user", 10),
+        password: "user",
         role: "user",
       });
     } else {
@@ -32,7 +31,7 @@ module.exports = async () => {
         email: faker.internet.email(),
         address: faker.location.streetAddress(),
         phone: faker.phone.number(),
-        password: hashedPassword,
+        password: "1234",
         role: "user",
       });
     }

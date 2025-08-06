@@ -1,7 +1,7 @@
-const { fa } = require("@faker-js/faker");
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
+const { BaseModel } = require("./BaseModel");
 
-class Product extends Model {
+class Product extends BaseModel {
   static initModel(sequelize) {
     Product.init(
       {
@@ -42,8 +42,10 @@ class Product extends Model {
 
     return Product;
   }
-  setImageUrl() {
-    this.image = `${process.env.BASE_URL_IMAGE}${this.image}`;
+  toJSON() {
+    const attributes = { ...this.get() };
+    attributes.image = `${process.env.BASE_URL_IMAGE}${attributes.image}`;
+    return attributes;
   }
 }
 

@@ -1,6 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
+const { BaseModel } = require("./BaseModel");
 
-class Order extends Model {
+class Order extends BaseModel {
   static initModel(sequelize) {
     Order.init(
       {

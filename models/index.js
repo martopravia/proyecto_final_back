@@ -42,6 +42,22 @@ Category.hasMany(Product, { foreignKey: "categoryId" });
 Product.hasMany(OrderDetails, { foreignKey: "productId" });
 OrderDetails.belongsTo(Product, { foreignKey: "productId" });
 
+const ModelsInfo = {
+  users: { model: User, include: [] },
+  products: {
+    model: Product,
+    include: {
+      model: Category,
+      attributes: ["name"],
+    },
+  },
+  orders: {
+    model: Order,
+    include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
+  },
+  category: { model: Category, include: [] },
+};
+
 module.exports = {
   sequelize,
   User,
@@ -49,4 +65,5 @@ module.exports = {
   Order,
   OrderDetails,
   Category,
+  ModelsInfo,
 };
