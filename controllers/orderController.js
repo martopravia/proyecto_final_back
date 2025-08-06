@@ -116,4 +116,25 @@ module.exports = {
       res.status(500).json({ error: "Internal server error" });
     }
   },
+  async getByUser(req, res) {
+    try {
+      const { userId } = req.params;
+
+      const orders = await Order.findAll({
+        where: { userId },
+        include: [
+          {
+            model: OrderDetails,
+            include: [Product],
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+
+      res.json(orders);
+    } catch (error) {
+      console.error("Error fetching user orders:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  },
 };
