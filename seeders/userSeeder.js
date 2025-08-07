@@ -36,11 +36,12 @@ module.exports = async () => {
     }
 
     const numberOfOrders = faker.number.int({ min: 1, max: 3 });
+    const orderStatus = ["pending", "completed", "cancelled"];
 
     for (let j = 0; j < numberOfOrders; j++) {
       const order = await Order.create({
         userId: user.id,
-        status: "pending",
+        status: orderStatus[faker.number.int({ min: 0, max: 2 })],
         totalAmount: 0,
       });
 
