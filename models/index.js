@@ -53,7 +53,7 @@ const ModelsInfo = {
   },
   orders: {
     model: Order,
-    include: [OrderDetails, { model: User, attributes: ["id", "name", "email"] }],
+    include: [OrderDetails, User],
   },
   category: { model: Category, include: [] },
 };
