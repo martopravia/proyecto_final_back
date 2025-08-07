@@ -2,7 +2,6 @@ require("dotenv").config();
 const { User } = require("../models");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
-const bcrypt = require("bcrypt");
 
 async function login(req, res) {
   try {
@@ -20,7 +19,9 @@ async function login(req, res) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ sub: user.id, role: user.role }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
 
     return res.status(200).json({ token, user });
   } catch (error) {
@@ -35,7 +36,7 @@ async function forgotPassword(req, res) {
     if (!user) {
       return res.status(404).json({ message: "Email not found" });
     }
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ sub: user.id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
     const resetLink = `http://localhost:5173/reset-password/${token}`;
@@ -67,14 +68,13 @@ async function resetPassword(req, res) {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findByPk(decoded.userId);
+    const user = await User.scope("withAll").findByPk(decoded.sub);
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
-    user.password = hashedPassword;
+    user.password = newPassword;
     await user.save();
 
     res.json({ message: "Password reset successfully" });
