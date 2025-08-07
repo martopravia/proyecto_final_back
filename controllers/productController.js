@@ -7,11 +7,12 @@ async function index(req, res) {
     const { limit, skip } = req.query;
 
     const products = await Product.findAll({
-      limit: limit ? parseInt(limit) : 20,
-      offset: skip ? parseInt(skip) : 0,
+      // limit: limit ? parseInt(limit) : 5,
+      // offset: skip ? parseInt(skip) : 0,
       include: {
         model: Category,
-        attributes: ["name"],
+        as: "category",
+        attributes: ["id", "name"],
       },
     });
     res.json(products);
