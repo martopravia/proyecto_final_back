@@ -14,7 +14,7 @@ const { validateRequiredFields } = require("../middlewares/validateRequiredField
 
 router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] })); //TODO: ADMIN / USER
 router.get("/", orderController.index);
-router.post("/", validateRequiredFields(), sanitizeData, orderController.store);
+router.post("/", orderController.store);
 router.get("/:id", requireEntity(), orderController.show);
 router.patch("/:id", sanitizeData, requireEntity(), orderController.update);
 router.delete("/:id", requireEntity(), orderController.destroy);
