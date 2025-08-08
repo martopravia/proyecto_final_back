@@ -59,7 +59,7 @@ async function update(req, res) {
 // Remove the specified resource from storage.
 async function destroy(req, res) {
   try {
-    const user = req.user;
+    const { user } = req;
 
     await user.destroy();
 

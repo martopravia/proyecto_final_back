@@ -13,6 +13,7 @@ class Category extends BaseModel {
         name: {
           type: DataTypes.STRING,
           allowNull: false,
+          unique: true,
         },
       },
       {

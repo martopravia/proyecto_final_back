@@ -70,7 +70,7 @@ async function update(req, res) {
 // Remove the specified resource from storage.
 async function destroy(req, res) {
   try {
-    const product = req.product;
+    const { product } = req;
 
     await product.destroy();
 

@@ -55,7 +55,7 @@ const ModelsInfo = {
     model: Order,
     include: [OrderDetails, User],
   },
-  category: { model: Category, include: [] },
+  categories: { model: Category, include: [] },
 };
 
 module.exports = {

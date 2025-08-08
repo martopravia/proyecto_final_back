@@ -1,4 +1,4 @@
-const { Category } = require("../models");
+const { Category, Product } = require("../models");
 
 async function index(req, res) {
   try {
@@ -10,15 +10,18 @@ async function index(req, res) {
   }
 }
 
+async function show(req, res) {
+  try {
+    return res.status(200).json(req.category);
+  } catch (error) {
+    console.error("Error fetching category:", error);
+    return res.status(500).json({ message: "Server error" });
+  }
+}
+
 async function store(req, res) {
   try {
-    const { name } = req.body;
-    if (!name) return res.status(400).json({ message: "Name is required" });
-
-    const existingCategory = await Category.findOne({ where: { name } });
-    if (existingCategory) return res.status(400).json({ message: "Category already exists" });
-
-    const category = await Category.create({ name });
+    const category = await Category.create(req.sanitizedData);
     res.status(201).json(category);
   } catch (error) {
     console.error(error);
@@ -28,13 +31,10 @@ async function store(req, res) {
 
 async function update(req, res) {
   try {
-    const { id } = req.params;
-    const { name } = req.body;
+    const { category, sanitizedData } = req;
 
-    const category = await Category.findByPk(id);
-    if (!category) return res.status(404).json({ message: "Category not found" });
+    Object.assign(category, sanitizedData);
 
-    category.name = name || category.name;
     await category.save();
 
     res.status(200).json(category);
@@ -46,12 +46,16 @@ async function update(req, res) {
 
 async function destroy(req, res) {
   try {
-    const { id } = req.params;
-    const category = await Category.findByPk(id);
-    if (!category) return res.status(404).json({ message: "Category not found" });
+    const { category } = req;
+
+    const [uncategorized] = await Category.findOrCreate({
+      where: { name: "uncategorized" },
+    });
+
+    await Product.update({ categoryId: uncategorized.id }, { where: { categoryId: category.id } });
 
     await category.destroy();
-    res.status(200).json({ message: "Category deleted" });
+    res.status(200).json({ message: "Category deleted and products updated" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error" });
@@ -60,6 +64,7 @@ async function destroy(req, res) {
 
 module.exports = {
   index,
+  show,
   store,
   update,
   destroy,
