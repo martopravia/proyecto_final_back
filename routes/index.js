@@ -9,6 +9,7 @@ const orderRoutes = require("./orderRoutes");
 const exampleRoutes = require("./exampleRoutes");
 // const tokenRoutes = require("./tokenRoutesDash");
 const authRoutes = require("./authRoutes");
+const categoryRoutes = require("./categoryRoutes");
 
 module.exports = (app) => {
   /*
@@ -25,6 +26,6 @@ module.exports = (app) => {
   app.use("/products", productRoutes);
   app.use("/tokens", authRoutes);
   app.use("/orders", orderRoutes);
-
+  app.use("/categories", categoryRoutes);
   app.use("/examples", exampleRoutes);
 };
