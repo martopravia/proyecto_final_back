@@ -17,6 +17,7 @@ router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }));
 router.get("/", userController.index);
 router.get("/:id", requireEntity(), userController.show);
 router.patch("/:id", sanitizeData, requireEntity(), userController.update);
+router.patch("/:id/change-password", requireEntity(), userController.changePassword);
 router.delete("/:id", requireEntity(), userController.destroy);
 
 module.exports = router;

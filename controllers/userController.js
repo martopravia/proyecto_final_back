@@ -70,6 +70,36 @@ async function destroy(req, res) {
   }
 }
 
+async function changePassword(req, res) {
+  try {
+    const { passwordCurrent, passwordNew, passwordConfirm } = req.body;
+    const user = req.user;
+
+    if (!passwordCurrent || !passwordNew || !passwordConfirm) {
+      return res.status(400).json({ message: "All password fields are required" });
+    }
+
+    if (passwordNew !== passwordConfirm) {
+      return res.status(400).json({ message: "New passwords do not match" });
+    }
+    if (passwordNew.length < 6) {
+      return res.status(400).json({ message: "New password must be at least 6 characters long" });
+    }
+    const isMatch = await user.validatePassword(passwordCurrent);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Current password is incorrect" });
+    }
+
+    user.password = passwordNew;
+    await user.save();
+
+    return res.status(200).json({ message: "Password changed successfully" });
+  } catch (error) {
+    console.error("Error changing password:", error);
+    return res.status(500).json({ message: "Server error" });
+  }
+}
+
 // Otros handlers...
 // ...
 
@@ -79,4 +109,5 @@ module.exports = {
   store,
   update,
   destroy,
+  changePassword,
 };

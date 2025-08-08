@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const { BaseModel } = require("./BaseModel");
+const bcrypt = require("bcrypt");
 
 class User extends BaseModel {
   static initModel(sequelize) {
@@ -65,6 +66,9 @@ class User extends BaseModel {
     const attributes = { ...this.get() };
     delete attributes.password;
     return attributes;
+  }
+  async validatePassword(candidatePassword) {
+    return await bcrypt.compare(candidatePassword, this.password);
   }
 }
 
