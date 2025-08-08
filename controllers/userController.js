@@ -31,7 +31,7 @@ async function store(req, res) {
       return res.status(400).json({ message: "User already exists." });
     }
 
-    const user = await User.create({ ...req.sanitizedData, role: "user" });
+    const user = await User.create({ ...req.sanitizedData });
 
     res.status(201).json(user);
   } catch (error) {
@@ -72,8 +72,8 @@ async function destroy(req, res) {
 
 async function changePassword(req, res) {
   try {
-    const { passwordCurrent, passwordNew, passwordConfirm } = req.body;
     const user = req.user;
+    const { passwordCurrent, passwordNew, passwordConfirm } = req.body;
 
     if (!passwordCurrent || !passwordNew || !passwordConfirm) {
       return res.status(400).json({ message: "All password fields are required" });

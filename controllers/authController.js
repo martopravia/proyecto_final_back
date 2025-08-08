@@ -41,8 +41,8 @@ async function forgotPassword(req, res) {
     });
     const resetLink =
       user.role === "admin"
-        ? `http://localhost:5175/reset-password/${token}`
-        : `http://localhost:5174/reset-password/${token}`;
+        ? `${process.env.DASHBOARD_URL}/reset-password/${token}`
+        : `${process.env.ECOMMERCE_URL}/reset-password/${token}`;
     // Here you would typically send the resetLink to the user's email
     console.log(`Password reset link: ${resetLink}`);
     const transporter = nodemailer.createTransport({
