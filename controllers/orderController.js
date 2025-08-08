@@ -5,16 +5,11 @@ module.exports = {
     try {
       const { limit, skip, userId } = req.query;
 
-      const where = {};
-      if (userId) {
-        where.userId = userId;
-      }
-
       const orders = await Order.findAll({
-        where,
+        include: [OrderDetails, User],
         limit: limit ? parseInt(limit) : 20,
         offset: skip ? parseInt(skip) : 0,
-        include: [OrderDetails, User],
+        where: userId ? { userId } : {},
       });
       res.json(orders);
     } catch (error) {

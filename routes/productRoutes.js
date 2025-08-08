@@ -5,6 +5,7 @@ const { expressjwt: checkjwt } = require("express-jwt");
 const { requireEntity } = require("../middlewares/requireEntity");
 const { sanitizeData } = require("../middlewares/sanitizeData");
 const { validateRequiredFields } = require("../middlewares/validateRequiredFields");
+const formidableParse = require("../middlewares/formidableParse");
 require("dotenv").config();
 
 /*
@@ -17,8 +18,8 @@ require("dotenv").config();
 router.get("/", productController.index);
 router.get("/:id", requireEntity(), productController.show);
 router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] })); //TODO: Solo ADMIN
-router.post("/", validateRequiredFields(), sanitizeData, productController.store);
-router.patch("/:id", sanitizeData, requireEntity(), productController.update);
+router.post("/", formidableParse, validateRequiredFields(), sanitizeData, productController.store);
+router.patch("/:id", formidableParse, sanitizeData, requireEntity(), productController.update);
 router.delete("/:id", requireEntity(), productController.destroy);
 
 module.exports = router;
