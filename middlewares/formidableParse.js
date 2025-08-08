@@ -13,16 +13,22 @@ module.exports = (req, res, next) => {
       console.error("Error en el formulario:", err);
       return res.status(500).json({ message: "Error en el formulario" });
     }
-    const { data, error } = await supabase.storage
-      .from("img")
-      .upload(files.image.newFilename, fs.createReadStream(files.image.filepath), {
-        cacheControl: "3600",
-        duplex: "half",
-        upsert: false,
-        contentType: files.image.mimetype,
-      });
+
+    if (files.image) {
+      const buffer = fs.readFileSync(files.image.filepath);
+
+      const { data, error } = await supabase.storage
+        .from("products")
+        .upload(files.image.newFilename, buffer, {
+          cacheControl: "3600",
+          upsert: false,
+          contentType: files.image.mimetype,
+        });
+    }
+
     req.body = { ...req.body, ...fields };
     req.files = files;
+
     next();
   });
 };

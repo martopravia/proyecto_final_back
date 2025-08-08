@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const { BaseModel } = require("./BaseModel");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 class User extends BaseModel {
   static initModel(sequelize) {

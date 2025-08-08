@@ -56,7 +56,7 @@ async function update(req, res) {
 
     Object.assign(product, sanitizedData);
 
-    if (files) product.image = files["image"].newFilename;
+    if (files.image) product.image = files.image.newFilename;
 
     await product.save();
 
