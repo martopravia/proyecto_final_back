@@ -10,14 +10,14 @@ module.exports = async () => {
       image: `${process.env.BASE_URL_IMAGE}sofa_fabric_grey_raw_pine_wood_3seater_memo.webp`,
     },
     {
-      name: "tables",
+      name: "chairs",
       alias: "Refined Seating",
       description:
         "Sophisticated seating solutions designed with precision, offering a harmonious balance between luxury and functionality.",
       image: `${process.env.BASE_URL_IMAGE}chair_wood_beech_velvet_soro.webp`,
     },
     {
-      name: "chairs",
+      name: "tables",
       alias: "Artisan Tables",
       description:
         "Exquisite artisan-made tables that embody minimalist design and enduring craftsmanship for a truly elevated interior.",
