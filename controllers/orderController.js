@@ -10,6 +10,7 @@ module.exports = {
         limit: limit ? parseInt(limit) : 20,
         offset: skip ? parseInt(skip) : 0,
         where: userId ? { userId } : {},
+        order: [["createdAt", "DESC"]],
       });
       res.json(orders);
     } catch (error) {
