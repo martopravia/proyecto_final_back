@@ -93,22 +93,6 @@ async function toggleFavorites(req, res) {
   }
 }
 
-async function getFavorites(req, res) {
-  const userId = req.user.id;
-  try {
-    const user = await User.findByPk(userId);
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-    const products = await Product.findAll({
-      where: { id: user.favorites || [] },
-    });
-    res.json(products);
-  } catch (error) {
-    console.error("Error fetching favorites:", error);
-    res.status(500).json({ message: "Server error" });
-  }
-}
 async function changePassword(req, res) {
   try {
     const user = req.user;
@@ -149,6 +133,5 @@ module.exports = {
   update,
   destroy,
   toggleFavorites,
-  getFavorites,
   changePassword,
 };

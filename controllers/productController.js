@@ -1,10 +1,22 @@
+const { Op } = require("sequelize");
 const { Product } = require("../models");
 const Category = require("../models/Category");
 
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const { limit, skip, category } = req.query;
+    const { limit, skip, category, ids } = req.query;
+
+    const where = {};
+
+    if (ids && typeof ids === "string") {
+      where.id = {
+        [Op.in]: ids
+          .split(",")
+          .map((s) => Number(s.trim()))
+          .filter((n) => !isNaN(n)),
+      };
+    }
 
     const products = await Product.findAll({
       include: {
@@ -17,19 +29,10 @@ async function index(req, res) {
       },
       limit: limit ? parseInt(limit) : 20,
       offset: skip ? parseInt(skip) : 0,
+      where,
     });
 
-    let favorites = [];
-    if (req.user) {
-      favorites = req.user.favorites || [];
-    }
-
-    const productsWithFavorites = products.map((product) => ({
-      ...product.toJSON(),
-      isFavorite: favorites.includes(product.id),
-    }));
-
-    res.json(productsWithFavorites);
+    res.json(products);
   } catch (error) {
     console.error("Error fetching products: ", error);
     res.status(500).json({ message: "Server error" });

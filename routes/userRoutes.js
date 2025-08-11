@@ -18,8 +18,7 @@ router.get("/", userController.index);
 router.get("/:id", requireEntity(), userController.show);
 router.patch("/:id", sanitizeData, requireEntity(), userController.update);
 router.patch("/:id/change-password", requireEntity(), userController.changePassword);
-router.delete("/:id", requireEntity(), userController.destroy);
 router.patch("/:id/favorites", requireEntity(), userController.toggleFavorites);
-router.get("/:id/favorites", requireEntity(), userController.getFavorites);
+router.delete("/:id", requireEntity(), userController.destroy);
 
 module.exports = router;
