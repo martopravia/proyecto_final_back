@@ -15,6 +15,19 @@ class Category extends BaseModel {
           allowNull: false,
           unique: true,
         },
+        alias: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: true,
+        },
+        description: {
+          type: DataTypes.TEXT,
+          allowNull: false,
+        },
+        image: {
+          type: DataTypes.STRING,
+          allowNull: true,
+        },
       },
       {
         sequelize,

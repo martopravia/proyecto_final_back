@@ -11,6 +11,7 @@ async function index(req, res) {
         model: Category,
         as: "category",
         attributes: ["id", "name"],
+        order: [["createdAt", "DESC"]],
         where: category ? { name: category } : {},
         required: !!category,
       },

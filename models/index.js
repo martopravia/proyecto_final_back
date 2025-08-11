@@ -48,7 +48,6 @@ const ModelsInfo = {
     model: Product,
     include: {
       model: Category,
-      attributes: ["name"],
     },
   },
   orders: {
