@@ -1,4 +1,5 @@
-const { User } = require("../models");
+const { tr } = require("@faker-js/faker");
+const { User, Product } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -70,8 +71,44 @@ async function destroy(req, res) {
   }
 }
 
-// Otros handlers...
-// ...
+async function toggleFavorites(req, res) {
+  const { productId } = req.body;
+  const { user } = req;
+  try {
+    const pid = parseInt(productId);
+
+    if (!user.favorites.includes(pid)) {
+      console.log("Agrega a favoritos");
+      user.favorites = [...user.favorites, pid];
+    } else {
+      console.log("Saca de favoritos");
+      user.favorites = user.favorites.filter((id) => id !== pid);
+    }
+    console.log(user);
+    await user.save();
+    res.status(200).json({ message: "Product added to favorites", data: user.favorites });
+  } catch (error) {
+    console.error("Error adding favorite:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+}
+
+async function getFavorites(req, res) {
+  const userId = req.user.id;
+  try {
+    const user = await User.findByPk(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    const products = await Product.findAll({
+      where: { id: user.favorites || [] },
+    });
+    res.json(products);
+  } catch (error) {
+    console.error("Error fetching favorites:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+}
 
 module.exports = {
   index,
@@ -79,4 +116,6 @@ module.exports = {
   store,
   update,
   destroy,
+  toggleFavorites,
+  getFavorites,
 };

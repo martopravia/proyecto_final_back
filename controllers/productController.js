@@ -15,7 +15,18 @@ async function index(req, res) {
         attributes: ["id", "name"],
       },
     });
-    res.json(products);
+
+    let favorites = [];
+    if (req.user) {
+      favorites = req.user.favorites || [];
+    }
+
+    const productsWithFavorites = products.map((product) => ({
+      ...product.toJSON(),
+      isFavorite: favorites.includes(product.id),
+    }));
+
+    res.json(productsWithFavorites);
   } catch (error) {
     console.error("Error fetching products: ", error);
     res.status(500).json({ message: "Server error" });

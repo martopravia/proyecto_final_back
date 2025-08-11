@@ -39,6 +39,10 @@ class User extends BaseModel {
           type: DataTypes.STRING,
           allowNull: false,
         },
+        favorites: {
+          type: DataTypes.JSON,
+          defaultValue: [],
+        },
       },
       {
         sequelize,
