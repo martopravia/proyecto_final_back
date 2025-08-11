@@ -39,7 +39,10 @@ async function forgotPassword(req, res) {
     const token = jwt.sign({ sub: user.id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+    const resetLink =
+      user.role === "admin"
+        ? `${process.env.DASHBOARD_URL}/reset-password/${token}`
+        : `${process.env.ECOMMERCE_URL}/reset-password/${token}`;
     // Here you would typically send the resetLink to the user's email
     console.log(`Password reset link: ${resetLink}`);
     const transporter = nodemailer.createTransport({

@@ -4,16 +4,19 @@ const Category = require("../models/Category");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const { limit, skip } = req.query;
+    const { limit, skip, category } = req.query;
 
     const products = await Product.findAll({
-      // limit: limit ? parseInt(limit) : 5,
-      // offset: skip ? parseInt(skip) : 0,
       include: {
         model: Category,
         as: "category",
         attributes: ["id", "name"],
+        order: [["createdAt", "DESC"]],
+        where: category ? { name: category } : {},
+        required: !!category,
       },
+      limit: limit ? parseInt(limit) : 20,
+      offset: skip ? parseInt(skip) : 0,
     });
 
     let favorites = [];
@@ -45,9 +48,12 @@ async function show(req, res) {
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  const { sanitizedData } = req.body;
+  const { sanitizedData, files } = req;
   try {
-    const product = await Product.create(sanitizedData);
+    const product = await Product.create({
+      ...sanitizedData,
+      image: files["image"].newFilename || null,
+    });
     res.status(201).json(product);
   } catch (error) {
     console.error("Error saving the product: ", error);
@@ -58,9 +64,11 @@ async function store(req, res) {
 // Update the specified resource in storage.
 async function update(req, res) {
   try {
-    const { product, sanitizedData } = req;
+    const { product, sanitizedData, files } = req;
 
     Object.assign(product, sanitizedData);
+
+    if (files.image) product.image = files.image.newFilename;
 
     await product.save();
 
@@ -74,7 +82,7 @@ async function update(req, res) {
 // Remove the specified resource from storage.
 async function destroy(req, res) {
   try {
-    const product = req.product;
+    const { product } = req;
 
     await product.destroy();
 

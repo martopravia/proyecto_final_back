@@ -13,6 +13,20 @@ class Category extends BaseModel {
         name: {
           type: DataTypes.STRING,
           allowNull: false,
+          unique: true,
+        },
+        alias: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: true,
+        },
+        description: {
+          type: DataTypes.TEXT,
+          allowNull: false,
+        },
+        image: {
+          type: DataTypes.STRING,
+          allowNull: true,
         },
       },
       {

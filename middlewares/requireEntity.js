@@ -21,8 +21,13 @@ export function requireEntity({ route, lookupField = "id", key, customInclude } 
     try {
       const where = {};
       where[lookupField] = req.params[lookupField];
+      const includeOptions = customInclude || include;
+      const shouldIncludePassword =
+        req.baseUrl === "/users" && req.path.includes("change-password");
 
-      const entity = await Model.findOne({ where, include: customInclude || include });
+      const entity = shouldIncludePassword
+        ? await Model.scope("withAll").findOne({ where, include: includeOptions })
+        : await Model.findOne({ where, include: includeOptions });
 
       if (!entity) {
         return res.status(404).json({

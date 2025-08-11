@@ -48,14 +48,13 @@ const ModelsInfo = {
     model: Product,
     include: {
       model: Category,
-      attributes: ["name"],
     },
   },
   orders: {
     model: Order,
     include: [OrderDetails, User],
   },
-  category: { model: Category, include: [] },
+  categories: { model: Category, include: [] },
 };
 
 module.exports = {

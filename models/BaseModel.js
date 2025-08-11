@@ -1,5 +1,5 @@
 import { Model } from "sequelize";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export class BaseModel extends Model {
   static sanitizeData(data) {
