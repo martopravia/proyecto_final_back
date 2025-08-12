@@ -1,15 +1,10 @@
-const { exec } = require("child_process");
-const util = require("util");
-const execAsync = util.promisify(exec);
+const { runAllSeeders } = require("../seeders/runAllSeeders");
 
 const SECRET_KEY = process.env.RESET_DB_KEY;
 
 async function resetDatabase(req, res) {
   try {
     const key = req.headers["x-reset-key"];
-    // console.log("Received key:", key);
-    // console.log("Expected key:", SECRET_KEY);
-    // console.log("SECRET_KEY is defined:", SECRET_KEY !== undefined);
 
     if (!SECRET_KEY) {
       console.error("RESET_DB_KEY not found in environment variables");
@@ -21,12 +16,7 @@ async function resetDatabase(req, res) {
       return res.status(403).json({ message: "Invalid key" });
     }
 
-    const { stdout, stderr } = await execAsync("node seeders/runAllSeeders.js");
-
-    if (stderr) {
-      console.error("stderr:", stderr);
-    }
-    console.log("stdout:", stdout);
+    await runAllSeeders();
 
     return res.status(200).json({ message: "Database reset successfully" });
   } catch (error) {
