@@ -9,7 +9,7 @@ async function index(req, res) {
 
     const where = {};
 
-    if (ids && typeof ids === "string") {
+    if (typeof ids === "string") {
       where.id = {
         [Op.in]: ids
           .split(",")

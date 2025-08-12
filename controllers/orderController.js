@@ -102,14 +102,15 @@ module.exports = {
 
   async update(req, res) {
     const { status } = req.body;
+    const { id } = req.params;
     try {
-      const order = await Order.findByPk(req.params.id);
-      if (!order) return res.status(404).json({ error: "Order not found" });
+      const orderToUpdate = await Order.findByPk(id);
+      if (!orderToUpdate) return res.status(404).json({ error: "Order not found" });
 
-      order.status = status || order.status;
-      await order.save();
+      orderToUpdate.status = status || orderToUpdate.status;
+      await orderToUpdate.save();
 
-      res.json(order);
+      res.json(orderToUpdate);
     } catch (error) {
       console.error("Error updating order:", error);
       res.status(500).json({ error: "Internal server error" });
