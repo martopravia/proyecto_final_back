@@ -38,4 +38,4 @@ async function runAllSeeders() {
   process.exit();
 }
 
-module.export = { runAllSeeders };
+module.exports = runAllSeeders;
