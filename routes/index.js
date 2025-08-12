@@ -10,7 +10,7 @@ const exampleRoutes = require("./exampleRoutes");
 // const tokenRoutes = require("./tokenRoutesDash");
 const authRoutes = require("./authRoutes");
 const categoryRoutes = require("./categoryRoutes");
-
+const adminRoutes = require("./adminRoutes");
 module.exports = (app) => {
   /*
    * Al construir una API REST, la convención es que las rutas relativas a
@@ -28,4 +28,5 @@ module.exports = (app) => {
   app.use("/orders", orderRoutes);
   app.use("/categories", categoryRoutes);
   app.use("/examples", exampleRoutes);
+  app.use("/admin", adminRoutes);
 };
