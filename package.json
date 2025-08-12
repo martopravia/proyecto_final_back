@@ -24,6 +24,8 @@
     "formidable": "^2.1.5",
     "mysql2": "^3.14.3",
     "nodemailer": "^7.0.5",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
     "pluralize": "^8.0.0",
     "sequelize": "^6.37.7"
   }
