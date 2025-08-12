@@ -21,7 +21,7 @@ async function resetDatabase(req, res) {
       return res.status(403).json({ message: "Invalid key" });
     }
 
-    const { stdout, stderr } = await execAsync("npm run tables && node seeders/runAllSeeders.js");
+    const { stdout, stderr } = await execAsync("node seeders/runAllSeeders.js");
 
     if (stderr) {
       console.error("stderr:", stderr);
