@@ -1,7 +1,7 @@
 const { runAllSeeders } = require("../seeders/runAllSeeders");
 
 const SECRET_KEY = process.env.RESET_DB_KEY;
-
+const one = 1 + 1;
 async function resetDatabase(req, res) {
   try {
     const key = req.headers["x-reset-key"];
