@@ -16,7 +16,6 @@ require("dotenv").config();
  */
 
 router.get("/", productController.index);
-router.get("/:slug/:id", requireEntity(), productController.show);
 router.get("/:id", requireEntity(), productController.show);
 router.use(checkjwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] })); //TODO: Solo ADMIN
 router.post("/", formidableParse, validateRequiredFields(), sanitizeData, productController.store);
