@@ -59,8 +59,23 @@ module.exports = {
         where: { id: productIds },
       });
 
-      if (dbProducts.length !== products.length) {
-        return res.status(400).json({ error: "Some products not found" });
+      for (let item of products) {
+        const dbProduct = dbProducts.find((p) => p.id === item.productId);
+        if (!dbProduct) {
+          return res.status(400).json({ error: `Product ${item.name} not found` });
+        }
+        if (item.quantity > dbProduct.stock) {
+          return res
+            .status(400)
+            .json({ error: `Insufficient stock for product ${dbProduct.name}` });
+        }
+      }
+
+      for (let item of products) {
+        await Product.decrement("stock", {
+          by: item.quantity,
+          where: { id: item.productId },
+        });
       }
 
       const orderDetailsData = products.map((item) => {

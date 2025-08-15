@@ -23,6 +23,7 @@ class Product extends BaseModel {
         },
         stock: {
           type: DataTypes.INTEGER,
+          allowNull: false,
           defaultValue: 0,
         },
         image: {
