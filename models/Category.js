@@ -38,6 +38,11 @@ class Category extends BaseModel {
 
     return Category;
   }
+  toJSON() {
+    const attributes = { ...this.get() };
+    attributes.image = `${process.env.BASE_URL_IMAGE}${attributes.image}`;
+    return attributes;
+  }
 }
 
 module.exports = Category;

@@ -4,7 +4,7 @@
     "image": "table_wood_polished_dark_algarrobo_orella.webp",
     "description": "This exceptional table features solid dark algarrobo wood with a polished finish, showcasing artisanal craftsmanship perfect for upscale interiors and sophisticated gatherings at home or in elegant spaces.",
     "stock": 11,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_polished_dark_algarrobo_orella",
     "price": 7425
@@ -14,7 +14,7 @@
     "image": "table_wood_lapacho_iron_tiptoe.webp",
     "description": "An exquisite piece crafted in lapacho wood with robust iron legs, combining rustic strength with modern lines to offer timeless elegance for both urban and country interiors.",
     "stock": 12,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_lapacho_iron_tiptoe",
     "price": 3270
@@ -24,7 +24,7 @@
     "image": "table_round_wood_cherry_black_iron_varden.webp",
     "description": "This round cherry wood table with black iron legs is designed for contemporary spaces. Its bold contrast and refined shape provide balance, beauty, and functionality in equal measure.",
     "stock": 20,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_round_wood_cherry_black_iron_varden",
     "price": 4120
@@ -34,7 +34,7 @@
     "image": "table_wood_cherry_black_iron.webp",
     "description": "This table combines cherry wood with black forged iron legs for a sleek industrial look. Perfect for modern dining rooms or as a stylish statement in creative studios.",
     "stock": 11,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_cherry_black_iron",
     "price": 6370
@@ -44,7 +44,7 @@
     "image": "table_wood_raw_pine_thy.webp",
     "description": "Rustic raw pine brings warmth and authenticity to this table, evoking simplicity and durability with a raw natural finish perfect for relaxed or earthy design environments.",
     "stock": 6,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_raw_pine_thy",
     "price": 7260
@@ -54,7 +54,7 @@
     "image": "table_wood_beech_polished_black_microcement_taavi.webp",
     "description": "Polished beech wood blends with sleek black microcement on this refined table, ideal for upscale minimal interiors or design-driven environments seeking elegance with personality.",
     "stock": 18,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_beech_polished_black_microcement_taavi",
     "price": 6220
@@ -64,7 +64,7 @@
     "image": "table_wood_mahogany_extendable_sancia.webp",
     "description": "A refined extendable table in classic mahogany wood, this piece suits both intimate dinners and large family gatherings. Its versatility is matched only by its timeless beauty.",
     "stock": 20,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_mahogany_extendable_sancia",
     "price": 5130
@@ -74,7 +74,7 @@
     "image": "table_wood_black_mahogany.webp",
     "description": "This black mahogany table is a bold and luxurious piece that anchors any room with sophistication. Its sturdy construction and dark finish suggest both tradition and innovation.",
     "stock": 7,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_black_mahogany",
     "price": 5745
@@ -84,7 +84,7 @@
     "image": "table_oval_large_red_oak_mailen.png",
     "description": "This large oval table in red oak combines flowing organic curves with elegant craftsmanship, offering a striking centerpiece for fine dining and entertaining with natural charm.",
     "stock": 17,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": false,
     "slug": "table_oval_large_red_oak_mailen",
     "price": 6025
@@ -94,7 +94,7 @@
     "image": "table_round_light_cherry_indara.png",
     "description": "Crafted in light cherry wood, this round table adds brightness and natural elegance to any room. A wonderful balance between simplicity, tradition, and refined modern design.",
     "stock": 2,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": false,
     "slug": "table_round_light_cherry_indara",
     "price": 5225
@@ -104,7 +104,7 @@
     "image": "table_iron_raw_red_oak_wood_karsten.webp",
     "description": "Combining raw red oak with industrial iron legs, this table stands firm in both style and function. A piece ideal for bold interiors with tactile authenticity.",
     "stock": 13,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_iron_raw_red_oak_wood_karsten",
     "price": 6055
@@ -114,7 +114,7 @@
     "image": "table_concrete_raw_pine_wood_hector.webp",
     "description": "A raw pine and concrete hybrid table with a modern edge. Its industrial charm and strong presence make it the perfect choice for contemporary living spaces.",
     "stock": 19,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_concrete_raw_pine_wood_hector",
     "price": 6085
@@ -124,7 +124,7 @@
     "image": "table_forged_iron_polished_lapacho_enzo.webp",
     "description": "The Enzo table brings together polished lapacho wood and elegant forged iron details. A luxurious focal point for those who appreciate craftsmanship and rich material contrast.",
     "stock": 13,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_forged_iron_polished_lapacho_enzo",
     "price": 6000
@@ -134,7 +134,7 @@
     "image": "table_oval_wood_olive_white_carlhansen.webp",
     "description": "A bright olive wood oval table with whitewashed details. It radiates warmth and freshness, perfect for Scandinavian-inspired interiors or modern rustic environments.",
     "stock": 17,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_oval_wood_olive_white_carlhansen",
     "price": 3335
@@ -144,7 +144,7 @@
     "image": "table_wood_olive_white_bermuda.webp",
     "description": "Crafted in olive wood and finished in soft white tones, this piece captures coastal charm and elegant craftsmanship in a clean, understated form that invites serenity.",
     "stock": 14,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_olive_white_bermuda",
     "price": 7445
@@ -154,7 +154,7 @@
     "image": "table_wood_dark_walnut_tempered_glass_ardal.webp",
     "description": "Dark walnut meets tempered glass in this contemporary classic. A refined table with a transparent touch, perfect for creating elegant dining moments or thoughtful workspace design.",
     "stock": 18,
-    "categoryId": 2,
+    "categoryId": 3,
     "featured": true,
     "slug": "table_wood_dark_walnut_tempered_glass_ardal",
     "price": 3225
@@ -165,7 +165,7 @@
     "image": "sofa_fabric_grey_raw_pine_wood_3seater_memo.webp",
     "description": "This elegant sofa features raw pine wood accents and gray fabric cushions, offering relaxed sophistication and durable design to elevate your living space with minimalist warmth and natural charm.",
     "stock": 2,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_fabric_grey_raw_pine_wood_3seater_memo",
     "price": 13715
@@ -175,7 +175,7 @@
     "image": "sofa_fabric_grey_raw_pine_wood_2seater_memo.webp",
     "description": "This cozy 2-seater sofa is crafted with grey fabric and raw pine wood for a casual, inviting presence that brings timeless comfort and practical elegance into your home environment.",
     "stock": 5,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_fabric_grey_raw_pine_wood_2seater_memo",
     "price": 3605
@@ -185,7 +185,7 @@
     "image": "sofa_sheepskin_fluffy_cream_martina.png",
     "description": "This luxurious sofa boasts creamy sheepskin upholstery and a fluffy texture, bringing warmth, softness, and irresistible charm into stylish interiors designed for indulgent relaxation and contemporary aesthetics.",
     "stock": 5,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_sheepskin_fluffy_cream_martina",
     "price": 6660
@@ -195,7 +195,7 @@
     "image": "sofa_aquaclean_greige_forged_iron_kumo.webp",
     "description": "A masterpiece of refined utility, this greige Aquaclean fabric sofa with forged iron structure invites elegance, comfort, and smart maintenance into modern spaces with understated sophistication.",
     "stock": 7,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_aquaclean_greige_forged_iron_kumo",
     "price": 7845
@@ -205,7 +205,7 @@
     "image": "sofa_velvet_red_wood_beech_jessa.webp",
     "description": "This bold red velvet sofa with light beech wood base invites attention and admiration, combining retro flair with the comfort and quality of masterful craftsmanship and modern living.",
     "stock": 6,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_velvet_red_wood_beech_jessa",
     "price": 4550
@@ -215,7 +215,7 @@
     "image": "sofa_microfiber_beige_wood_walnut_frenddi.webp",
     "description": "Wrapped in soft beige microfiber and supported by warm walnut legs, this sofa offers an inviting design that prioritizes durability, style, and everyday lounging with modern elegance.",
     "stock": 4,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_microfiber_beige_wood_walnut_frenddi",
     "price": 5495
@@ -225,7 +225,7 @@
     "image": "sofa_fluffy_leather_pink_sumo.webp",
     "description": "An extravagant piece with blush pink leather and fluffy lines, this sofa is made for bold interiors where comfort meets luxury in soft, sculptural sophistication and standout form.",
     "stock": 9,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_fluffy_leather_pink_sumo",
     "price": 5835
@@ -235,7 +235,7 @@
     "image": "sofa_modular_velvet_linen_beige_minotti.jpg",
     "description": "This modular beige velvet and linen sofa adapts effortlessly to elegant spaces, blending natural fibers and rich textures for comfort and flexibility without compromising elevated aesthetics.",
     "stock": 12,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_modular_velvet_linen_beige_minotti",
     "price": 3560
@@ -245,7 +245,7 @@
     "image": "sofa_velvet_darkbeige_ellie.jpg",
     "description": "A stunning dark beige velvet 2-seater that exudes softness and comfort, Ellie is crafted for those who desire subtle opulence in a compact, cozy and curated piece.",
     "stock": 19,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_velvet_darkbeige_ellie",
     "price": 6010
@@ -255,7 +255,7 @@
     "image": "sofa_modular_suede_2seater_reddishorange_shova.webp",
     "description": "Finished in rich reddish-orange suede, this modular 2-seater sofa adds a sophisticated twist of color and texture, creating a stylish and versatile seating solution for bold interiors.",
     "stock": 12,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_modular_suede_2seater_reddishorange_shova",
     "price": 6190
@@ -265,7 +265,7 @@
     "image": "sofa_modular_suede_lightblue_corda.webp",
     "description": "Wrapped in light blue suede, Corda is an effortlessly stylish modular sofa offering clean lines, soft touch, and adaptable comfort for refined modern homes and expressive ambiances.",
     "stock": 20,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_modular_suede_lightblue_corda",
     "price": 3750
@@ -275,7 +275,7 @@
     "image": "sofa_linen_beige_wood_legs_carlotta.png",
     "description": "Carlotta blends beige linen with subtle wood legs in a classic design that emphasizes comfort, breathability, and the relaxed charm of Mediterranean-inspired interiors with modern lines.",
     "stock": 3,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_linen_beige_wood_legs_carlotta",
     "price": 7460
@@ -285,7 +285,7 @@
     "image": "sofa_microfiber_aquaclean_grey_campo.png",
     "description": "Campo brings together Aquaclean grey fabric and plush cushioning in a durable, family-friendly sofa that effortlessly elevates daily lounging with resilient beauty and minimalist aesthetic appeal.",
     "stock": 8,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": false,
     "slug": "sofa_microfiber_aquaclean_grey_campo",
     "price": 16720
@@ -295,7 +295,7 @@
     "image": "sofa_velvet_2seater_beige.webp",
     "description": "This beige 2-seater velvet sofa introduces tactile luxury and soft elegance, enhancing modern interiors with compact proportions and a cozy retreat of comfort and visual refinement.",
     "stock": 11,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_velvet_2seater_beige",
     "price": 5005
@@ -305,7 +305,7 @@
     "image": "sofa_velvet_3seater_beige.webp",
     "description": "This beige velvet 3-seater sofa is a sophisticated staple offering generous seating, classic texture, and seamless integration into refined living rooms and stylish spaces of distinction.",
     "stock": 7,
-    "categoryId": 1,
+    "categoryId": 2,
     "featured": true,
     "slug": "sofa_velvet_3seater_beige",
     "price": 4920
@@ -316,7 +316,7 @@
     "image": "chair_wood_beech_velvet_soro.webp",
     "description": "This designer chair features a beech wood frame and soft velvet upholstery, blending comfort and elegance for luxurious modern dining spaces or home offices.",
     "stock": 15,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wood_beech_velvet_soro",
     "price": 1095
@@ -326,7 +326,7 @@
     "image": "chair_leather_brown_zahara.png",
     "description": "An authentic piece with warm brown genuine leather and sleek lines. This chair adds rich sophistication to any elegant dining or professional setting.",
     "stock": 18,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_leather_brown_zahara",
     "price": 1140
@@ -336,7 +336,7 @@
     "image": "chair_wood_solid_eucalyptus_nina.png",
     "description": "Crafted from solid eucalyptus wood, this minimalist chair merges durability and timeless design, perfect for natural-style interiors or warm rustic spaces.",
     "stock": 18,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_wood_solid_eucalyptus_nina",
     "price": 1055
@@ -346,7 +346,7 @@
     "image": "chair_wood_cherry_corduroy_beige.png",
     "description": "This cherry wood chair with beige corduroy upholstery brings mid-century charm and cozy texture into contemporary living or lounge environments.",
     "stock": 20,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_wood_cherry_corduroy_beige",
     "price": 1150
@@ -356,7 +356,7 @@
     "image": "chair_beige_chenille_beige.png",
     "description": "An elegant blend of soft chenille fabric and sculptural design. This chair adds texture, charm, and comfort to both formal and relaxed interiors.",
     "stock": 6,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_beige_chenille_beige",
     "price": 895
@@ -366,7 +366,7 @@
     "image": "chair_wood_teak_velvet_green_konna.png",
     "description": "This teak wood chair with green velvet seat delivers a perfect mix of earthy sophistication and plush seating for dining or reading corners.",
     "stock": 2,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_wood_teak_velvet_green_konna",
     "price": 1025
@@ -376,7 +376,7 @@
     "image": "chair_3legs_wood_walnut_fluffy_chenille.png",
     "description": "A bold piece featuring dark walnut wood, soft chenille fabric and a unique three-leg design, merging balance and artistic expression.",
     "stock": 4,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_3legs_wood_walnut_fluffy_chenille",
     "price": 710
@@ -386,7 +386,7 @@
     "image": "chair_swivel_chenille_green_oak_marchin.png",
     "description": "An exquisite chair with swivel base, green chenille, and oak structure. Perfect for creative spaces where comfort and elegance intertwine.",
     "stock": 14,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_swivel_chenille_green_oak_marchin",
     "price": 845
@@ -396,7 +396,7 @@
     "image": "chair_wood_solid_english_oak_fondes.png",
     "description": "A solid English oak chair with a timeless design. Its grain-rich finish and ergonomic backrest make it a standout in refined interiors.",
     "stock": 10,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_wood_solid_english_oak_fondes",
     "price": 1180
@@ -406,7 +406,7 @@
     "image": "chair_sheepskin_forged_black_iron_aniella.png",
     "description": "A luxurious piece with black forged iron legs and fluffy sheepskin cover, designed for premium lounge areas and modern design lovers.",
     "stock": 20,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_sheepskin_forged_black_iron_aniella",
     "price": 990
@@ -416,7 +416,7 @@
     "image": "chair_wood_ebony_raw_copenhagen_normann.webp",
     "description": "Ebony wood in a raw matte finish defines this sleek minimalist chair that fits seamlessly into Nordic and industrial-inspired interiors.",
     "stock": 9,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wood_ebony_raw_copenhagen_normann",
     "price": 1130
@@ -426,7 +426,7 @@
     "image": "chair_wood_cedar_smoked_lanson.webp",
     "description": "Smoked cedar gives this chair an earthy aroma and deep grain tone. A unique find for interiors that celebrate natural warmth.",
     "stock": 5,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wood_cedar_smoked_lanson",
     "price": 800
@@ -436,7 +436,7 @@
     "image": "chair_wood_oak_danish_karsten_iron.jpg",
     "description": "Danish oak and iron converge in this ultra-modern chair. With bold contrast and comfort, it invites admiration and conversation in any setting.",
     "stock": 9,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wood_oak_danish_karsten_iron",
     "price": 730
@@ -446,7 +446,7 @@
     "image": "chair_wood_oak_minimalist_swivel.jpg",
     "description": "Featuring a natural oak build and minimalist swivel seat, this chair is both striking and practical for evolving contemporary interiors.",
     "stock": 15,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wood_oak_minimalist_swivel",
     "price": 990
@@ -456,7 +456,7 @@
     "image": "chair_wood_cedar_chenille.png",
     "description": "Combining raw cedar structure and plush chenille seating, this piece radiates elegance while maintaining strong natural warmth and character.",
     "stock": 5,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": false,
     "slug": "chair_wood_cedar_chenille",
     "price": 1015
@@ -466,7 +466,7 @@
     "image": "chair_wooden_cord.webp",
     "description": "This wooden chair features an artisanal cord weave seat, bringing relaxed rustic refinement to eclectic kitchens and breezy verandas alike.",
     "stock": 9,
-    "categoryId": 3,
+    "categoryId": 4,
     "featured": true,
     "slug": "chair_wooden_cord",
     "price": 885

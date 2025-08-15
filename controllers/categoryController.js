@@ -20,8 +20,12 @@ async function show(req, res) {
 }
 
 async function store(req, res) {
+  const { sanitizedData, files } = req;
   try {
-    const category = await Category.create(req.sanitizedData);
+    const category = await Category.create({
+      ...sanitizedData,
+      image: files["image"].newFilename || null,
+    });
     res.status(201).json(category);
   } catch (error) {
     console.error(error);
@@ -31,9 +35,11 @@ async function store(req, res) {
 
 async function update(req, res) {
   try {
-    const { category, sanitizedData } = req;
+    const { category, sanitizedData, files } = req;
 
     Object.assign(category, sanitizedData);
+
+    if (files.image) category.image = files.image.newFilename;
 
     await category.save();
 
@@ -47,6 +53,10 @@ async function update(req, res) {
 async function destroy(req, res) {
   try {
     const { category } = req;
+
+    if (category.name === "uncategorized") {
+      return res.status(400).json({ message: "This category cannot be ereased" });
+    }
 
     const [uncategorized] = await Category.findOrCreate({
       where: { name: "uncategorized" },
