@@ -50,6 +50,10 @@ async function destroy(req, res) {
 
     const [uncategorized] = await Category.findOrCreate({
       where: { name: "uncategorized" },
+      defaults: {
+        alias: "Uncategorized",
+        description: "Default category for uncategorized products",
+      },
     });
 
     await Product.update({ categoryId: uncategorized.id }, { where: { categoryId: category.id } });

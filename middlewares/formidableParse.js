@@ -14,15 +14,20 @@ module.exports = (req, res, next) => {
       return res.status(500).json({ message: "Error en el formulario" });
     }
 
-    if (files.image) {
-      const buffer = fs.readFileSync(files.image.filepath);
+    let imageFile = files.image;
+    if (Array.isArray(imageFile)) {
+      imageFile = imageFile[0];
+    }
+
+    if (imageFile) {
+      const buffer = fs.readFileSync(imageFile.filepath);
 
       const { data, error } = await supabase.storage
         .from("products")
-        .upload(files.image.newFilename, buffer, {
+        .upload(imageFile.newFilename, buffer, {
           cacheControl: "3600",
           upsert: false,
-          contentType: files.image.mimetype,
+          contentType: imageFile.mimetype,
         });
     }
 
