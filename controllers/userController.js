@@ -46,6 +46,10 @@ async function update(req, res) {
   try {
     const { user, sanitizedData } = req;
 
+    if (user.email === "admin@test.com") {
+      return res.status(400).json({ message: "Cannot change super admin" });
+    }
+
     Object.assign(user, sanitizedData);
 
     await user.save();
@@ -61,6 +65,10 @@ async function update(req, res) {
 async function destroy(req, res) {
   try {
     const { user } = req;
+
+    if (user.email === "admin@test.com") {
+      return res.status(400).json({ message: "Cannot delete super admin" });
+    }
 
     await user.destroy();
 

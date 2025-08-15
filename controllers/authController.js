@@ -31,6 +31,9 @@ async function login(req, res) {
 }
 async function forgotPassword(req, res) {
   const { email } = req.body;
+  if (email === "admin@test.com") {
+    return res.status(400).json({ message: "Cannot change super admin password" });
+  }
   try {
     const user = await User.findOne({ where: { email } });
     if (!user) {
@@ -73,6 +76,9 @@ async function resetPassword(req, res) {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.scope("withAll").findByPk(decoded.sub);
 
+    if (user.email === "admin@test.com") {
+      return res.status(400).json({ message: "Cannot change super admin password" });
+    }
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
