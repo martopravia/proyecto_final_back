@@ -48,6 +48,7 @@ class User extends BaseModel {
       {
         sequelize,
         modelName: "user",
+        tableName: "users",
         scopes: {
           withAll: {},
         },
