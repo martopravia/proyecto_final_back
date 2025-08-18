@@ -5,7 +5,7 @@ const Category = require("../models/Category");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const { limit, skip, category, ids } = req.query;
+    const { limit, skip, category, ids, order } = req.query;
 
     const where = {};
 
@@ -18,18 +18,20 @@ async function index(req, res) {
       };
     }
 
+    const sortOrder = order?.toUpperCase() === "ASC" ? order : "DESC";
+
     const products = await Product.findAll({
       include: {
         model: Category,
         as: "category",
         attributes: ["id", "name"],
-        order: [["createdAt", "DESC"]],
         where: category ? { name: category } : {},
         required: !!category,
       },
       limit: limit ? parseInt(limit) : 20,
       offset: skip ? parseInt(skip) : 0,
       where,
+      order: [["createdAt", sortOrder]],
     });
 
     res.json(products);

@@ -2,7 +2,11 @@ const { Category, Product } = require("../models");
 
 async function index(req, res) {
   try {
-    const categories = await Category.findAll();
+    const { order } = req.query;
+
+    const sortOrder = order?.toUpperCase() === "ASC" ? order : "DESC";
+
+    const categories = await Category.findAll({ order: [["createdAt", sortOrder]] });
     res.status(200).json(categories);
   } catch (error) {
     console.error(error);
