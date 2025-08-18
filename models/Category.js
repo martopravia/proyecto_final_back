@@ -40,7 +40,7 @@ class Category extends BaseModel {
   }
   toJSON() {
     const attributes = { ...this.get() };
-    attributes.image = `${process.env.BASE_URL_IMAGE}${attributes.image}`;
+    attributes.image = attributes.image && `${process.env.BASE_URL_IMAGE}${attributes.image}`;
     return attributes;
   }
 }
